@@ -176,7 +176,7 @@ function HomePage({ setCurrentPage }) {
                 ))}
               </div>
               <p className="text-stone-600">
-                Joining <strong className="text-slate-800">2,400+</strong> survivors and caregivers
+                Join with other survivors and caregivers
               </p>
             </div>
           </div>
@@ -295,30 +295,6 @@ function HomePage({ setCurrentPage }) {
         </div>
       </section>
 
-      {/* Impact */}
-      <section className="py-24 px-6 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-amber-400 font-semibold text-sm uppercase tracking-wider">Our Impact</span>
-            <h2 className="font-serif text-4xl font-medium mt-3">Real people. Real support. <span className="text-amber-400">Real difference.</span></h2>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { num: '2,400+', label: 'Survivors & Caregivers' },
-              { num: '15,000+', label: 'Peer Connections' },
-              { num: '98%', label: 'Feel Less Alone' },
-              { num: '24/7', label: 'Always Available' },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="font-serif text-5xl font-bold text-amber-400 mb-2">{stat.num}</div>
-                <div className="font-semibold">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -367,7 +343,7 @@ function CTASection({ setCurrentPage }) {
             I'm a Caregiver
           </button>
         </div>
-        <p className="text-stone-500">Free. Private. No account required.</p>
+        <p className="text-stone-500">Free. Private.</p>
       </div>
     </section>
   );
@@ -620,20 +596,20 @@ function ChatInterface({ journeyType, onBack }) {
 
         if (isBot) {
           setIsTyping(true);
-          await new Promise(r => { timeout = setTimeout(r, 1000 + Math.random() * 500); });
+          await new Promise(r => { timeout = setTimeout(r, 1500 + Math.random() * 500); });
           if (cancelled) break;
           setIsTyping(false);
         } else {
           setIsUserTyping(true);
-          await new Promise(r => { timeout = setTimeout(r, 1500 + Math.random() * 1000); });
+          await new Promise(r => { timeout = setTimeout(r, 3500 + Math.random() * 1500); });
           if (cancelled) break;
           setIsUserTyping(false);
         }
 
         setMessages(prev => [...prev, msg]);
 
-        // Shorter pause between consecutive bot messages, longer pause after user messages
-        const pauseDuration = isBot && isBotFollowUp ? 600 : 1200;
+        // Pause to read the message before the next one appears
+        const pauseDuration = isBot && isBotFollowUp ? 1500 : 2500;
         await new Promise(r => { timeout = setTimeout(r, pauseDuration); });
       }
 
@@ -656,9 +632,17 @@ function ChatInterface({ journeyType, onBack }) {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isTyping, isUserTyping]);
 
+  // Lock body scroll when chat is open
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
   return (
-    <section className="min-h-[calc(100vh-5rem)] min-h-[calc(100dvh-5rem)] py-8 px-6 bg-stone-100 flex items-start justify-center">
-      <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[calc(100vh-7rem)] max-h-[calc(100dvh-7rem)]">
+    <section className="chat-overlay bg-stone-100 flex items-center justify-center overflow-hidden z-10" onTouchMove={(e) => e.stopPropagation()}>
+      <div className="w-full max-w-lg mx-4 bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col" style={{ height: 'calc(100% - 2rem)', maxHeight: '650px' }}>
         <div className={`${guide.color} p-5 flex items-center justify-between text-white flex-shrink-0`}>
           <button onClick={onBack} className="opacity-80 hover:opacity-100">← Back</button>
           <div className="flex items-center gap-3">
