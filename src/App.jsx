@@ -505,54 +505,161 @@ function GetStartedPage({ setCurrentPage }) {
   );
 }
 
+// Scripted conversation for Bob (Survivor Guide)
+const bobConversation = [
+  { sender: 'bot', text: "Hey. I'm Bob." },
+  { sender: 'bot', text: "I'm a survivor too." },
+  { sender: 'bot', text: "Can you tell me what's going on?" },
+  { sender: 'user', text: "I just got diagnosed yesterday. Breast cancer. I don't even know where to start." },
+  { sender: 'bot', text: "I'm really glad you reached out. Yesterday... that's so fresh. How are you feeling right now?" },
+  { sender: 'user', text: "Honestly? Terrified. I couldn't sleep at all last night." },
+  { sender: 'bot', text: "That makes complete sense. I remember that feeling. The world looks different after those words, doesn't it?" },
+  { sender: 'user', text: "Yes. Everything feels surreal. Like I'm watching someone else's life." },
+  { sender: 'bot', text: "That disconnected feeling is so common in the first days. Your mind is trying to process something huge." },
+  { sender: 'bot', text: "Can I ask - do you have someone with you right now?" },
+  { sender: 'user', text: "My sister is here. She's been amazing but I can tell she's scared too." },
+  { sender: 'bot', text: "It's good you're not alone. And it's okay that she's scared. You can be scared together." },
+  { sender: 'user', text: "I have so many questions but I don't even know what to ask." },
+  { sender: 'bot', text: "That's completely normal. You don't need to have it all figured out right now." },
+  { sender: 'bot', text: "In my experience, the questions come when they're ready. And we'll be here for each one." },
+  { sender: 'user', text: "When you were diagnosed, what helped you the most in those first days?" },
+  { sender: 'bot', text: "Honestly? Talking to someone who'd been through it. Someone who could tell me that this chaotic feeling wouldn't last forever." },
+  { sender: 'bot', text: "The medical stuff was important, but having someone who just got it... that's what carried me through." },
+  { sender: 'user', text: "That's why I came here. My doctor gave me pamphlets but I needed something more human." },
+  { sender: 'bot', text: "Pamphlets don't hold your hand at 3am. I understand." },
+  { sender: 'user', text: "Exactly. Do you think... will I be okay?" },
+  { sender: 'bot', text: "I can't promise what your journey will look like. But I can tell you that you're stronger than you know right now." },
+  { sender: 'bot', text: "And you won't walk this path alone. That I can promise." },
+  { sender: 'user', text: "That actually helps. Just knowing someone understands." },
+  { sender: 'bot', text: "I do understand. And there are thousands of survivors in our community who understand too." },
+  { sender: 'user', text: "I think I'd like to connect with someone who had a similar diagnosis. Is that possible?" },
+  { sender: 'bot', text: "Absolutely. That's exactly what we do here. I can help match you with someone who's been where you are." },
+  { sender: 'bot', text: "Someone who knows the specific fears, the specific questions, the specific victories." },
+  { sender: 'user', text: "That would mean so much. I feel less alone already just talking to you." },
+  { sender: 'bot', text: "You ARE less alone. You found us, and that took courage." },
+  { sender: 'user', text: "I don't feel very courageous right now." },
+  { sender: 'bot', text: "Courage isn't the absence of fear. It's reaching out when you're terrified. You did that today." },
+  { sender: 'user', text: "I never thought of it that way." },
+  { sender: 'bot', text: "One day at a time. Sometimes one hour at a time. That's how we do this." },
+  { sender: 'user', text: "Thank you, Bob. Really." },
+  { sender: 'bot', text: "I'm here whenever you need me. Day or night. That's what Forward Together is about." },
+  { sender: 'bot', text: "You're not alone in this. Not anymore." },
+];
+
+// Scripted conversation for Miri (Caregiver Guide)
+const miriConversation = [
+  { sender: 'bot', text: "Hi. I'm Miri." },
+  { sender: 'bot', text: "I see you too." },
+  { sender: 'bot', text: "How are you holding up?" },
+  { sender: 'user', text: "Honestly, I don't even know. My husband was diagnosed with lymphoma three weeks ago." },
+  { sender: 'bot', text: "Three weeks. You're still in the thick of it. I'm glad you reached out." },
+  { sender: 'bot', text: "Can I ask - how are YOU doing? Not him. You." },
+  { sender: 'user', text: "Nobody asks me that. Everyone asks about Tom." },
+  { sender: 'bot', text: "I know. That's why I'm asking. Your feelings matter too." },
+  { sender: 'user', text: "I feel guilty even talking about myself. He's the one who's sick." },
+  { sender: 'bot', text: "There's no guilt needed here. Caring for someone takes everything you have. Your struggles are real." },
+  { sender: 'user', text: "I'm exhausted. I haven't slept properly in weeks. I'm trying to be strong for him and the kids." },
+  { sender: 'bot', text: "That's such a heavy weight to carry. Being strong for everyone while processing your own fear." },
+  { sender: 'user', text: "Sometimes I feel so angry. And then I feel awful for being angry." },
+  { sender: 'bot', text: "Anger is a normal part of this. It doesn't make you a bad person or a bad caregiver." },
+  { sender: 'bot', text: "You're allowed to feel angry at the situation. At cancer. At the unfairness of it all." },
+  { sender: 'user', text: "I just want our normal life back." },
+  { sender: 'bot', text: "Of course you do. Grieving the life you had is part of this journey too." },
+  { sender: 'user', text: "I feel like I'm failing at everything. The house is a mess, I forgot my daughter's permission slip..." },
+  { sender: 'bot', text: "You're not failing. You're surviving an impossible situation. Something has to give." },
+  { sender: 'bot', text: "A messy house doesn't mean you're failing. It means you're prioritizing what matters most." },
+  { sender: 'user', text: "I keep thinking I should be handling this better." },
+  { sender: 'bot', text: "There's no 'right way' to handle this. You're doing it, and that's what counts." },
+  { sender: 'user', text: "My mom keeps offering to help but I feel like I should be able to do this myself." },
+  { sender: 'bot', text: "Accepting help isn't weakness. It's wisdom. You can't pour from an empty cup." },
+  { sender: 'bot', text: "What if letting your mom help is actually a gift to her too? A way she can feel useful?" },
+  { sender: 'user', text: "I never thought of it that way." },
+  { sender: 'bot', text: "Caregivers often forget they deserve care too. When's the last time you did something just for you?" },
+  { sender: 'user', text: "I can't even remember. There's no time." },
+  { sender: 'bot', text: "Even ten minutes matters. A cup of tea alone. A short walk. Small things add up." },
+  { sender: 'user', text: "I feel selfish even thinking about myself." },
+  { sender: 'bot', text: "Taking care of yourself isn't selfish. It's necessary. You can't support Tom if you collapse." },
+  { sender: 'user', text: "That's what my sister says too." },
+  { sender: 'bot', text: "She's right. Would you like to connect with other caregivers who understand this?" },
+  { sender: 'user', text: "There are others going through this?" },
+  { sender: 'bot', text: "Many others. Caregivers who know exactly what 3am anxiety feels like. Who understand the isolation." },
+  { sender: 'bot', text: "Sometimes talking to someone who's been there makes all the difference." },
+  { sender: 'user', text: "Yes, I think I'd like that. It would help to not feel so alone in this." },
+  { sender: 'bot', text: "You're not alone. There's a whole community here who sees what you're carrying." },
+  { sender: 'user', text: "Thank you for asking about me, Miri. It means more than you know." },
+  { sender: 'bot', text: "That's what I'm here for. You matter, not just as a caregiver, but as a person." },
+  { sender: 'bot', text: "We're here whenever you need us. You don't have to carry this alone." },
+];
+
 function ChatInterface({ journeyType, onBack }) {
   const [messages, setMessages] = useState([]);
-  const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [isUserTyping, setIsUserTyping] = useState(false);
   const messagesEndRef = useRef(null);
 
-  const guide = journeyType === 'survivor' 
+  const guide = journeyType === 'survivor'
     ? { name: 'Bob', role: 'Survivor Guide', color: 'bg-teal-600' }
     : { name: 'Miri', role: 'Caregiver Guide', color: 'bg-rose-500' };
 
-  const initialMessages = journeyType === 'survivor'
-    ? ["Hey. I'm Bob.", "I'm a survivor too.", "Can you tell me what's going on?"]
-    : ["Hi. I'm Miri.", "I see you too.", "How are you holding up?"];
+  const conversation = journeyType === 'survivor' ? bobConversation : miriConversation;
 
   useEffect(() => {
+    let cancelled = false;
     let timeout;
-    const showMessages = async () => {
-      for (const msg of initialMessages) {
-        setIsTyping(true);
-        await new Promise(r => { timeout = setTimeout(r, 1200); });
-        setIsTyping(false);
-        setMessages(prev => [...prev, { sender: 'bot', text: msg }]);
-        await new Promise(r => { timeout = setTimeout(r, 400); });
+
+    const runSimulation = async () => {
+      setMessages([]);
+
+      for (let i = 0; i < conversation.length; i++) {
+        if (cancelled) break;
+
+        const msg = conversation[i];
+        const isBot = msg.sender === 'bot';
+        const nextMsg = conversation[i + 1];
+        const isBotFollowUp = nextMsg && nextMsg.sender === 'bot';
+
+        if (isBot) {
+          setIsTyping(true);
+          await new Promise(r => { timeout = setTimeout(r, 1000 + Math.random() * 500); });
+          if (cancelled) break;
+          setIsTyping(false);
+        } else {
+          setIsUserTyping(true);
+          await new Promise(r => { timeout = setTimeout(r, 1500 + Math.random() * 1000); });
+          if (cancelled) break;
+          setIsUserTyping(false);
+        }
+
+        setMessages(prev => [...prev, msg]);
+
+        // Shorter pause between consecutive bot messages, longer pause after user messages
+        const pauseDuration = isBot && isBotFollowUp ? 600 : 1200;
+        await new Promise(r => { timeout = setTimeout(r, pauseDuration); });
+      }
+
+      // Pause at end before looping
+      await new Promise(r => { timeout = setTimeout(r, 5000); });
+      if (!cancelled) {
+        runSimulation();
       }
     };
-    showMessages();
-    return () => clearTimeout(timeout);
-  }, []);
+
+    runSimulation();
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timeout);
+    };
+  }, [journeyType]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isTyping]);
-
-  const handleSend = () => {
-    if (!inputValue.trim()) return;
-    setMessages(prev => [...prev, { sender: 'user', text: inputValue }]);
-    setInputValue('');
-    setIsTyping(true);
-    setTimeout(() => {
-      setIsTyping(false);
-      setMessages(prev => [...prev, { sender: 'bot', text: "Thank you for sharing. You're not alone." }]);
-    }, 1500);
-  };
+  }, [messages, isTyping, isUserTyping]);
 
   return (
-    <section className="min-h-screen py-24 px-6 bg-stone-100 flex items-center justify-center">
-      <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden">
-        <div className={`${guide.color} p-5 flex items-center justify-between text-white`}>
+    <section className="min-h-[calc(100vh-5rem)] min-h-[calc(100dvh-5rem)] py-8 px-6 bg-stone-100 flex items-start justify-center">
+      <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[calc(100vh-7rem)] max-h-[calc(100dvh-7rem)]">
+        <div className={`${guide.color} p-5 flex items-center justify-between text-white flex-shrink-0`}>
           <button onClick={onBack} className="opacity-80 hover:opacity-100">← Back</button>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full" />
@@ -566,8 +673,8 @@ function ChatInterface({ journeyType, onBack }) {
             Online
           </div>
         </div>
-        
-        <div className="h-80 overflow-y-auto p-5 space-y-4">
+
+        <div className="flex-1 overflow-y-auto p-5 space-y-4 min-h-0">
           {messages.map((msg, i) => (
             <div key={i} className={`flex gap-2 ${msg.sender === 'user' ? 'flex-row-reverse' : ''}`}>
               {msg.sender === 'bot' && <div className={`w-8 h-8 ${guide.color} rounded-full flex-shrink-0`} />}
@@ -586,15 +693,23 @@ function ChatInterface({ journeyType, onBack }) {
               </div>
             </div>
           )}
+          {isUserTyping && (
+            <div className="flex gap-2 flex-row-reverse">
+              <div className={`${guide.color} p-4 rounded-2xl rounded-br-sm flex gap-1`}>
+                <span className="w-2 h-2 bg-white/60 rounded-full animate-bounce" />
+                <span className="w-2 h-2 bg-white/60 rounded-full animate-bounce" style={{ animationDelay: '0.15s' }} />
+                <span className="w-2 h-2 bg-white/60 rounded-full animate-bounce" style={{ animationDelay: '0.3s' }} />
+              </div>
+            </div>
+          )}
           <div ref={messagesEndRef} />
         </div>
-        
-        <div className="p-4 border-t flex gap-3">
-          <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleSend()} placeholder="Share what's on your mind..." className="flex-1 px-5 py-3 border-2 border-stone-200 rounded-full outline-none focus:border-teal-500" />
-          <button onClick={handleSend} disabled={!inputValue.trim()} className={`w-12 h-12 ${guide.color} text-white rounded-full disabled:opacity-50`}>→</button>
+
+        <div className="p-4 border-t flex-shrink-0">
+          <p className="text-center text-sm text-stone-500 italic">Watching a sample conversation...</p>
         </div>
-        
-        <p className="text-center text-xs text-stone-400 pb-4">Demo only. Full app connects you with real people.</p>
+
+        <p className="text-center text-xs text-stone-400 pb-4 flex-shrink-0">Demo only. Full app connects you with real people.</p>
       </div>
     </section>
   );
