@@ -3,20 +3,9 @@
 @tailwind utilities;
 
 /* Base styles */
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-body {
+html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  min-height: 100vh;
-  min-height: 100dvh;
 }
 
 /* Fixed chat overlay */
