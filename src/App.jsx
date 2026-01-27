@@ -550,9 +550,9 @@ function ChatInterface({ journeyType, onBack }) {
   };
 
   return (
-    <section className="min-h-screen py-24 px-6 bg-stone-100 flex items-center justify-center">
-      <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden">
-        <div className={`${guide.color} p-5 flex items-center justify-between text-white`}>
+    <section className="min-h-[calc(100vh-5rem)] min-h-[calc(100dvh-5rem)] py-8 px-6 bg-stone-100 flex items-start justify-center">
+      <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[calc(100vh-7rem)] max-h-[calc(100dvh-7rem)]">
+        <div className={`${guide.color} p-5 flex items-center justify-between text-white flex-shrink-0`}>
           <button onClick={onBack} className="opacity-80 hover:opacity-100">← Back</button>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full" />
@@ -567,7 +567,7 @@ function ChatInterface({ journeyType, onBack }) {
           </div>
         </div>
         
-        <div className="h-80 overflow-y-auto p-5 space-y-4">
+        <div className="flex-1 overflow-y-auto p-5 space-y-4 min-h-0">
           {messages.map((msg, i) => (
             <div key={i} className={`flex gap-2 ${msg.sender === 'user' ? 'flex-row-reverse' : ''}`}>
               {msg.sender === 'bot' && <div className={`w-8 h-8 ${guide.color} rounded-full flex-shrink-0`} />}
@@ -589,12 +589,12 @@ function ChatInterface({ journeyType, onBack }) {
           <div ref={messagesEndRef} />
         </div>
         
-        <div className="p-4 border-t flex gap-3">
+        <div className="p-4 border-t flex gap-3 flex-shrink-0">
           <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleSend()} placeholder="Share what's on your mind..." className="flex-1 px-5 py-3 border-2 border-stone-200 rounded-full outline-none focus:border-teal-500" />
           <button onClick={handleSend} disabled={!inputValue.trim()} className={`w-12 h-12 ${guide.color} text-white rounded-full disabled:opacity-50`}>→</button>
         </div>
-        
-        <p className="text-center text-xs text-stone-400 pb-4">Demo only. Full app connects you with real people.</p>
+
+        <p className="text-center text-xs text-stone-400 pb-4 flex-shrink-0">Demo only. Full app connects you with real people.</p>
       </div>
     </section>
   );
