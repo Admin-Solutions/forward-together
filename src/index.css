@@ -18,6 +18,18 @@ html, body {
   bottom: 0;
   height: calc(100vh - 5rem);
   height: calc(100dvh - 5rem);
+  touch-action: none;
+}
+
+/* Prevent body scroll when chat is open */
+body.chat-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+html.chat-open {
+  overflow: hidden;
 }
 
 /* Custom animations */

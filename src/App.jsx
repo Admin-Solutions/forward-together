@@ -629,15 +629,17 @@ function ChatInterface({ journeyType, onBack }) {
 
   // Lock body scroll when chat is open
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('chat-open');
+    document.documentElement.classList.add('chat-open');
     return () => {
-      document.body.style.overflow = '';
+      document.body.classList.remove('chat-open');
+      document.documentElement.classList.remove('chat-open');
     };
   }, []);
 
   return (
-    <section className="chat-overlay bg-stone-100 flex items-center justify-center overflow-hidden z-10" onTouchMove={(e) => e.stopPropagation()}>
-      <div className="w-full max-w-lg mx-4 bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col" style={{ height: 'calc(100% - 2rem)', maxHeight: '650px' }}>
+    <section className="chat-overlay bg-stone-100 flex items-center justify-center overflow-hidden z-10" onTouchMove={(e) => e.preventDefault()}>
+      <div className="w-full max-w-lg mx-4 bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col" style={{ height: 'calc(100% - 2rem)', maxHeight: '650px' }} onTouchMove={(e) => e.stopPropagation()}>
         <div className={`${guide.color} p-5 flex items-center justify-between text-white flex-shrink-0`}>
           <button onClick={onBack} className="opacity-80 hover:opacity-100">← Back</button>
           <div className="flex items-center gap-3">
@@ -653,7 +655,7 @@ function ChatInterface({ journeyType, onBack }) {
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-5 space-y-4 min-h-0">
+        <div className="flex-1 overflow-y-auto p-5 space-y-4 min-h-0" style={{ touchAction: 'pan-y', overscrollBehavior: 'contain' }} onTouchMove={(e) => e.stopPropagation()}>
           {messages.map((msg, i) => (
             <div key={i} className={`flex gap-2 ${msg.sender === 'user' ? 'flex-row-reverse' : ''}`}>
               {msg.sender === 'bot' && <div className={`w-8 h-8 ${guide.color} rounded-full flex-shrink-0`} />}
