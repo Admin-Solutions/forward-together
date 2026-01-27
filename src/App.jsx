@@ -134,11 +134,6 @@ function HomePage({ setCurrentPage }) {
         
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-50 rounded-full text-teal-700 text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-teal-500 rounded-full animate-pulse" />
-              A New Kind of Support
-            </div>
-            
             <h1 className="font-serif text-5xl lg:text-6xl font-medium text-slate-800 leading-tight mb-6">
               You don't have to
               <span className="block bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">
