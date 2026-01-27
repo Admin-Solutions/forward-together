@@ -65,6 +65,8 @@ export default function ForwardTogetherWebsite() {
         {currentPage === 'for-caregivers' && <ForCaregiversPage setCurrentPage={setCurrentPage} />}
         {currentPage === 'stories' && <StoriesPage setCurrentPage={setCurrentPage} />}
         {currentPage === 'get-started' && <GetStartedPage setCurrentPage={setCurrentPage} />}
+        {currentPage === 'chat-bob' && <ChatInterface journeyType="survivor" onBack={() => setCurrentPage('home')} />}
+        {currentPage === 'chat-miri' && <ChatInterface journeyType="caregiver" onBack={() => setCurrentPage('home')} />}
       </main>
 
       {/* Footer */}
@@ -264,17 +266,17 @@ function HomePage({ setCurrentPage }) {
                   <span key={i} className="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm">{trait}</span>
                 ))}
               </div>
-              <button onClick={() => setCurrentPage('get-started')} className="w-full py-3 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700">
+              <button onClick={() => setCurrentPage('chat-bob')} className="w-full py-3 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700">
                 Talk to Bob
               </button>
             </div>
-            
+
             <div className="bg-white rounded-3xl p-8 shadow-lg border-t-4 border-rose-500">
               <div className="w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-700 rounded-full mb-6" />
               <h3 className="font-serif text-3xl font-medium text-rose-600 mb-2">Miri</h3>
               <p className="text-stone-500 mb-4">Caregiver Guide</p>
               <p className="text-stone-600 leading-relaxed mb-6">
-                Miri sees you — not just as a caregiver, but as someone carrying an invisible weight. 
+                Miri sees you — not just as a caregiver, but as someone carrying an invisible weight.
                 Your needs matter too.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
@@ -282,7 +284,7 @@ function HomePage({ setCurrentPage }) {
                   <span key={i} className="px-3 py-1 bg-rose-50 text-rose-700 rounded-full text-sm">{trait}</span>
                 ))}
               </div>
-              <button onClick={() => setCurrentPage('get-started')} className="w-full py-3 bg-rose-500 text-white rounded-full font-semibold hover:bg-rose-600">
+              <button onClick={() => setCurrentPage('chat-miri')} className="w-full py-3 bg-rose-500 text-white rounded-full font-semibold hover:bg-rose-600">
                 Talk to Miri
               </button>
             </div>
@@ -331,10 +333,10 @@ function CTASection({ setCurrentPage }) {
         <h2 className="font-serif text-4xl font-medium text-slate-800 mt-6 mb-4">Ready to take the first step?</h2>
         <p className="text-xl text-stone-600 mb-8">You don't have to figure this out alone.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-6">
-          <button onClick={() => setCurrentPage('get-started')} className="px-8 py-4 bg-teal-600 text-white rounded-full text-lg font-semibold hover:bg-teal-700 shadow-lg">
+          <button onClick={() => setCurrentPage('chat-bob')} className="px-8 py-4 bg-teal-600 text-white rounded-full text-lg font-semibold hover:bg-teal-700 shadow-lg">
             I'm a Survivor
           </button>
-          <button onClick={() => setCurrentPage('get-started')} className="px-8 py-4 bg-rose-500 text-white rounded-full text-lg font-semibold hover:bg-rose-600 shadow-lg">
+          <button onClick={() => setCurrentPage('chat-miri')} className="px-8 py-4 bg-rose-500 text-white rounded-full text-lg font-semibold hover:bg-rose-600 shadow-lg">
             I'm a Caregiver
           </button>
         </div>
@@ -356,7 +358,7 @@ function HowItWorksPage({ setCurrentPage }) {
 function ForSurvivorsPage({ setCurrentPage }) {
   return (
     <>
-      <PageHero label="For Survivors" title="You've already shown incredible strength." highlight="Let us walk with you." subtitle="Connect with people who get it — because they've lived it." ctaText="Talk to Bob →" ctaAction={() => setCurrentPage('get-started')} ctaColor="bg-teal-600 hover:bg-teal-700" />
+      <PageHero label="For Survivors" title="You've already shown incredible strength." highlight="Let us walk with you." subtitle="Connect with people who get it — because they've lived it." ctaText="Talk to Bob →" ctaAction={() => setCurrentPage('chat-bob')} ctaColor="bg-teal-600 hover:bg-teal-700" />
       
       <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -385,7 +387,7 @@ function ForSurvivorsPage({ setCurrentPage }) {
 function ForCaregiversPage({ setCurrentPage }) {
   return (
     <>
-      <PageHero label="For Caregivers" title="You're showing up every day." highlight="Who's showing up for you?" subtitle="Forward Together sees you as someone who needs support too." ctaText="Talk to Miri →" ctaAction={() => setCurrentPage('get-started')} ctaColor="bg-rose-500 hover:bg-rose-600" />
+      <PageHero label="For Caregivers" title="You're showing up every day." highlight="Who's showing up for you?" subtitle="Forward Together sees you as someone who needs support too." ctaText="Talk to Miri →" ctaAction={() => setCurrentPage('chat-miri')} ctaColor="bg-rose-500 hover:bg-rose-600" />
       
       <section className="py-24 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
@@ -448,11 +450,14 @@ function GetStartedPage({ setCurrentPage }) {
   const [step, setStep] = useState('choice');
   const [journeyType, setJourneyType] = useState(null);
 
-  if (step === 'chat') return <ChatInterface journeyType={journeyType} onBack={() => setStep('choice')} />;
+  if (step === 'chat') return <ChatInterface journeyType={journeyType} onBack={() => setCurrentPage('home')} />;
 
   return (
     <section className="min-h-screen py-24 px-6 bg-stone-50 flex items-center">
       <div className="max-w-4xl mx-auto text-center">
+        <button onClick={() => setCurrentPage('home')} className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-stone-600 hover:text-stone-800 hover:bg-stone-200 rounded-full transition-colors">
+          <span className="text-lg">←</span> Back to Home
+        </button>
         <h1 className="font-serif text-4xl font-medium text-slate-800 mb-4">Welcome to Forward Together</h1>
         <p className="text-xl text-stone-600 mb-12">We're here for you.</p>
         
@@ -641,7 +646,9 @@ function ChatInterface({ journeyType, onBack }) {
     <section className="chat-overlay bg-stone-100 flex items-center justify-center overflow-hidden z-10" onTouchMove={(e) => e.preventDefault()}>
       <div className="w-full max-w-lg mx-4 bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col" style={{ height: 'calc(100% - 2rem)', maxHeight: '650px' }} onTouchMove={(e) => e.stopPropagation()}>
         <div className={`${guide.color} p-5 flex items-center justify-between text-white flex-shrink-0`}>
-          <button onClick={onBack} className="opacity-80 hover:opacity-100">← Back</button>
+          <button onClick={onBack} className="flex items-center gap-2 px-3 py-1.5 bg-white/20 hover:bg-white/30 rounded-full font-medium transition-colors">
+            <span className="text-lg">←</span> Back
+          </button>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full" />
             <div>
