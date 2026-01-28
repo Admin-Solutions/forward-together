@@ -74,6 +74,16 @@ export default function ForwardTogetherWebsite() {
               >
                 ES
               </button>
+              <button
+                onClick={() => setLanguage('de')}
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                  language === 'de'
+                    ? 'bg-white text-teal-700 shadow-sm'
+                    : 'text-stone-500 hover:text-stone-700'
+                }`}
+              >
+                DE
+              </button>
             </div>
 
             <button
@@ -105,6 +115,16 @@ export default function ForwardTogetherWebsite() {
               }`}
             >
               ES
+            </button>
+            <button
+              onClick={() => setLanguage('de')}
+              className={`px-2 py-1 rounded-full text-xs font-medium transition-colors ${
+                language === 'de'
+                  ? 'bg-white text-teal-700 shadow-sm'
+                  : 'text-stone-500'
+              }`}
+            >
+              DE
             </button>
           </div>
         </div>
