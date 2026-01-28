@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLanguage } from './LanguageContext.jsx';
 
 export default function ForwardTogetherWebsite() {
   const [currentPage, setCurrentPage] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const { t, language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -14,6 +16,14 @@ export default function ForwardTogetherWebsite() {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
+  const navItems = [
+    { id: 'home', label: t('nav.home') },
+    { id: 'how-it-works', label: t('nav.howItWorks') },
+    { id: 'for-survivors', label: t('nav.forSurvivors') },
+    { id: 'for-caregivers', label: t('nav.forCaregivers') },
+    { id: 'stories', label: t('nav.stories') },
+  ];
+
   return (
     <div className="min-h-screen bg-stone-50 font-sans text-stone-800">
       {/* Navigation */}
@@ -22,36 +32,79 @@ export default function ForwardTogetherWebsite() {
           <button onClick={() => setCurrentPage('home')} className="flex items-center gap-3">
             <Logo size={44} />
             <div className="flex flex-col leading-tight">
-              <span className="font-serif font-semibold text-lg text-slate-800">Forward</span>
-              <span className="font-serif text-sm text-teal-600">Together</span>
+              <span className="font-serif font-semibold text-lg text-slate-800">{t('brand.forward')}</span>
+              <span className="font-serif text-sm text-teal-600">{t('brand.together')}</span>
             </div>
           </button>
-          
+
           <div className="hidden md:flex items-center gap-2">
-            {[
-              { id: 'home', label: 'Home' },
-              { id: 'how-it-works', label: 'How It Works' },
-              { id: 'for-survivors', label: 'For Survivors' },
-              { id: 'for-caregivers', label: 'For Caregivers' },
-              { id: 'stories', label: 'Stories' },
-            ].map(item => (
+            {navItems.map(item => (
               <button
                 key={item.id}
                 onClick={() => setCurrentPage(item.id)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  currentPage === item.id 
-                    ? 'bg-teal-50 text-teal-700' 
+                  currentPage === item.id
+                    ? 'bg-teal-50 text-teal-700'
                     : 'text-stone-600 hover:bg-stone-100'
                 }`}
               >
                 {item.label}
               </button>
             ))}
-            <button 
+
+            {/* Language Selector */}
+            <div className="flex items-center gap-1 ml-2 bg-stone-100 rounded-full p-1">
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                  language === 'en'
+                    ? 'bg-white text-teal-700 shadow-sm'
+                    : 'text-stone-500 hover:text-stone-700'
+                }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => setLanguage('es')}
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                  language === 'es'
+                    ? 'bg-white text-teal-700 shadow-sm'
+                    : 'text-stone-500 hover:text-stone-700'
+                }`}
+              >
+                ES
+              </button>
+            </div>
+
+            <button
               onClick={() => setCurrentPage('get-started')}
               className="ml-2 px-5 py-2.5 bg-teal-600 text-white rounded-full text-sm font-semibold hover:bg-teal-700 transition-colors shadow-lg shadow-teal-600/25"
             >
-              Begin Your Journey
+              {t('nav.beginJourney')}
+            </button>
+          </div>
+
+          {/* Mobile Language Selector */}
+          <div className="flex md:hidden items-center gap-1 bg-stone-100 rounded-full p-1">
+            <button
+              onClick={() => setLanguage('en')}
+              className={`px-2 py-1 rounded-full text-xs font-medium transition-colors ${
+                language === 'en'
+                  ? 'bg-white text-teal-700 shadow-sm'
+                  : 'text-stone-500'
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage('es')}
+              className={`px-2 py-1 rounded-full text-xs font-medium transition-colors ${
+                language === 'es'
+                  ? 'bg-white text-teal-700 shadow-sm'
+                  : 'text-stone-500'
+              }`}
+            >
+              ES
             </button>
           </div>
         </div>
@@ -70,44 +123,76 @@ export default function ForwardTogetherWebsite() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-800 text-white py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            <div className="md:col-span-1">
-              <div className="flex items-center gap-3 mb-4">
-                <Logo size={48} />
-                <div>
-                  <div className="font-serif font-semibold">Forward Together</div>
-                  <div className="text-sm text-stone-400">You're not alone in this.</div>
-                </div>
+      <Footer setCurrentPage={setCurrentPage} />
+    </div>
+  );
+}
+
+function Footer({ setCurrentPage }) {
+  const { t } = useLanguage();
+
+  const footerColumns = [
+    {
+      title: t('footer.forYou'),
+      links: [
+        { label: t('footer.forSurvivors'), action: () => setCurrentPage('for-survivors') },
+        { label: t('footer.forCaregivers'), action: () => setCurrentPage('for-caregivers') },
+        { label: t('footer.getStarted'), action: () => setCurrentPage('get-started') },
+        { label: t('footer.stories'), action: () => setCurrentPage('stories') },
+      ]
+    },
+    {
+      title: t('footer.about'),
+      links: [
+        { label: t('footer.howItWorks'), action: () => setCurrentPage('how-it-works') },
+        { label: t('footer.ourStory'), action: () => {} },
+        { label: t('footer.contactUs'), action: () => {} },
+      ]
+    },
+    {
+      title: t('footer.resources'),
+      links: [
+        { label: t('footer.helpCenter'), action: () => {} },
+        { label: t('footer.privacyPolicy'), action: () => {} },
+        { label: t('footer.termsOfService'), action: () => {} },
+      ]
+    },
+  ];
+
+  return (
+    <footer className="bg-slate-800 text-white py-16 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-3 mb-4">
+              <Logo size={48} />
+              <div>
+                <div className="font-serif font-semibold">{t('brand.forward')} {t('brand.together')}</div>
+                <div className="text-sm text-stone-400">{t('brand.tagline')}</div>
               </div>
             </div>
-            
-            {[
-              { title: 'For You', links: ['For Survivors', 'For Caregivers', 'Get Started', 'Stories'] },
-              { title: 'About', links: ['How It Works', 'Our Story', 'Contact Us'] },
-              { title: 'Resources', links: ['Help Center', 'Privacy Policy', 'Terms of Service'] },
-            ].map((col, i) => (
-              <div key={i}>
-                <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-stone-400">{col.title}</h4>
-                <div className="space-y-2">
-                  {col.links.map((link, j) => (
-                    <button key={j} className="block text-stone-300 hover:text-amber-400 transition-colors text-sm">
-                      {link}
-                    </button>
-                  ))}
-                </div>
+          </div>
+
+          {footerColumns.map((col, i) => (
+            <div key={i}>
+              <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-stone-400">{col.title}</h4>
+              <div className="space-y-2">
+                {col.links.map((link, j) => (
+                  <button key={j} onClick={link.action} className="block text-stone-300 hover:text-amber-400 transition-colors text-sm">
+                    {link.label}
+                  </button>
+                ))}
               </div>
-            ))}
-          </div>
-          
-          <div className="pt-8 border-t border-stone-700 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-stone-500">
-            <p>© 2025 Forward Together Project. All rights reserved.</p>
-            <p className="italic">Built by survivors, for survivors. Because no one should face cancer alone.</p>
-          </div>
+            </div>
+          ))}
         </div>
-      </footer>
-    </div>
+
+        <div className="pt-8 border-t border-stone-700 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-stone-500">
+          <p>{t('footer.copyright')}</p>
+          <p className="italic">{t('footer.builtBy')}</p>
+        </div>
+      </div>
+    </footer>
   );
 }
 
@@ -127,43 +212,43 @@ function Logo({ size = 60 }) {
 
 // Home Page
 function HomePage({ setCurrentPage }) {
+  const { t } = useLanguage();
+
   return (
     <>
       {/* Hero Section */}
       <section className="min-h-screen flex items-center py-20 px-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-        
+
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative">
           <div>
             <h1 className="font-serif text-5xl lg:text-6xl font-medium text-slate-800 leading-tight mb-6">
-              You don't have to
+              {t('hero.title1')}
               <span className="block bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">
-                face this alone
+                {t('hero.title2')}
               </span>
             </h1>
-            
+
             <p className="text-xl text-stone-600 leading-relaxed mb-8 max-w-lg">
-              Whether you're navigating a cancer diagnosis or caring for someone who is, 
-              Forward Together connects you with people who truly understand — 
-              because they've walked the same path.
+              {t('hero.description')}
             </p>
-            
+
             <div className="flex flex-wrap gap-4 mb-10">
-              <button 
+              <button
                 onClick={() => setCurrentPage('get-started')}
                 className="px-8 py-4 bg-teal-600 text-white rounded-full text-lg font-semibold hover:bg-teal-700 transition-all shadow-xl shadow-teal-600/30"
               >
-                Start Your Journey →
+                {t('hero.startJourney')}
               </button>
-              <button 
+              <button
                 onClick={() => setCurrentPage('how-it-works')}
                 className="px-8 py-4 bg-white text-slate-700 rounded-full text-lg font-semibold border-2 border-stone-200 hover:border-teal-300 transition-all"
               >
-                See How It Works
+                {t('hero.seeHowItWorks')}
               </button>
             </div>
-            
+
             <div className="flex items-center gap-4">
               <div className="flex -space-x-3">
                 {['bg-amber-500', 'bg-teal-500', 'bg-rose-500', 'bg-violet-500', 'bg-blue-500'].map((color, i) => (
@@ -173,30 +258,30 @@ function HomePage({ setCurrentPage }) {
                 ))}
               </div>
               <p className="text-stone-600">
-                Join with other survivors and caregivers
+                {t('hero.joinWith')}
               </p>
             </div>
           </div>
-          
+
           {/* Chat Preview */}
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-md mx-auto lg:ml-auto">
             <div className="bg-gradient-to-r from-teal-600 to-teal-700 p-5 flex items-center gap-4">
               <div className="w-12 h-12 bg-white/20 rounded-full" />
               <div>
-                <p className="font-serif font-semibold text-white text-lg">Bob</p>
-                <p className="text-teal-100 text-sm">Your Survivor Guide</p>
+                <p className="font-serif font-semibold text-white text-lg">{t('chatPreview.bob')}</p>
+                <p className="text-teal-100 text-sm">{t('chatPreview.yourSurvivorGuide')}</p>
               </div>
             </div>
             <div className="p-5 space-y-4 max-h-80 overflow-y-auto">
               {[
-                { type: 'bot', text: "Hey. I'm Bob. I'm a survivor too. I remember what it felt like in the beginning." },
-                { type: 'bot', text: "Someone helped me back then. That's what I'm here to do for you." },
-                { type: 'user', text: "I just found out yesterday. I don't even know where to start..." },
-                { type: 'bot', text: "That's okay. You don't have to have it figured out. Can you tell me a little about what's going on?" },
+                { type: 'bot', text: t('chatPreview.msg1') },
+                { type: 'bot', text: t('chatPreview.msg2') },
+                { type: 'user', text: t('chatPreview.msg3') },
+                { type: 'bot', text: t('chatPreview.msg4') },
               ].map((msg, i) => (
                 <div key={i} className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed ${
-                  msg.type === 'user' 
-                    ? 'bg-teal-600 text-white ml-auto rounded-br-sm' 
+                  msg.type === 'user'
+                    ? 'bg-teal-600 text-white ml-auto rounded-br-sm'
                     : 'bg-stone-100 text-stone-700 rounded-bl-sm'
                 }`}>
                   {msg.text}
@@ -216,21 +301,21 @@ function HomePage({ setCurrentPage }) {
       <section className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">How It Works</span>
+            <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">{t('howItWorks.label')}</span>
             <h2 className="font-serif text-4xl font-medium text-slate-800 mt-3 mb-4">
-              From overwhelmed to <span className="bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">supported</span>
+              {t('howItWorks.title1')} <span className="bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">{t('howItWorks.title2')}</span>
             </h2>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              No clinical questionnaires. No waiting rooms. Just meaningful connection.
+              {t('howItWorks.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { num: '01', title: 'Share Your Story', desc: "No forms. Just conversation.", color: 'bg-amber-500' },
-              { num: '02', title: 'Get Understood', desc: 'AI guides respond with genuine empathy.', color: 'bg-teal-500' },
-              { num: '03', title: 'Find Your People', desc: "Connect with those who've walked your path.", color: 'bg-rose-500' },
-              { num: '04', title: 'Move Forward Together', desc: "Build connections. Help others.", color: 'bg-violet-500' },
+              { num: '01', title: t('howItWorks.step1Title'), desc: t('howItWorks.step1Desc'), color: 'bg-amber-500' },
+              { num: '02', title: t('howItWorks.step2Title'), desc: t('howItWorks.step2Desc'), color: 'bg-teal-500' },
+              { num: '03', title: t('howItWorks.step3Title'), desc: t('howItWorks.step3Desc'), color: 'bg-rose-500' },
+              { num: '04', title: t('howItWorks.step4Title'), desc: t('howItWorks.step4Desc'), color: 'bg-violet-500' },
             ].map((step, i) => (
               <div key={i} className="bg-stone-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
                 <span className={`inline-block ${step.color} text-white text-sm font-bold px-4 py-1 rounded-full mb-6`}>
@@ -248,44 +333,42 @@ function HomePage({ setCurrentPage }) {
       <section className="py-24 px-6 bg-stone-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">Meet Your Guides</span>
-            <h2 className="font-serif text-4xl font-medium text-slate-800 mt-3">Always here. Always understanding.</h2>
+            <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">{t('guides.label')}</span>
+            <h2 className="font-serif text-4xl font-medium text-slate-800 mt-3">{t('guides.title')}</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-3xl p-8 shadow-lg border-t-4 border-teal-500">
               <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full mb-6" />
-              <h3 className="font-serif text-3xl font-medium text-teal-700 mb-2">Bob</h3>
-              <p className="text-stone-500 mb-4">Survivor Guide</p>
+              <h3 className="font-serif text-3xl font-medium text-teal-700 mb-2">{t('guides.bob.name')}</h3>
+              <p className="text-stone-500 mb-4">{t('guides.bob.role')}</p>
               <p className="text-stone-600 leading-relaxed mb-6">
-                A survivor himself, Bob understands the weight of those first days. He's here to listen 
-                and share wisdom from thousands of survivors.
+                {t('guides.bob.description')}
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {['Warm & steady', 'Been there', 'No judgment'].map((trait, i) => (
+                {[t('guides.bob.trait1'), t('guides.bob.trait2'), t('guides.bob.trait3')].map((trait, i) => (
                   <span key={i} className="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm">{trait}</span>
                 ))}
               </div>
               <button onClick={() => setCurrentPage('chat-bob')} className="w-full py-3 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700">
-                Talk to Bob
+                {t('guides.bob.button')}
               </button>
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-lg border-t-4 border-rose-500">
               <div className="w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-700 rounded-full mb-6" />
-              <h3 className="font-serif text-3xl font-medium text-rose-600 mb-2">Miri</h3>
-              <p className="text-stone-500 mb-4">Caregiver Guide</p>
+              <h3 className="font-serif text-3xl font-medium text-rose-600 mb-2">{t('guides.miri.name')}</h3>
+              <p className="text-stone-500 mb-4">{t('guides.miri.role')}</p>
               <p className="text-stone-600 leading-relaxed mb-6">
-                Miri sees you — not just as a caregiver, but as someone carrying an invisible weight.
-                Your needs matter too.
+                {t('guides.miri.description')}
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {['Compassionate', 'Practical', 'Sees your struggle'].map((trait, i) => (
+                {[t('guides.miri.trait1'), t('guides.miri.trait2'), t('guides.miri.trait3')].map((trait, i) => (
                   <span key={i} className="px-3 py-1 bg-rose-50 text-rose-700 rounded-full text-sm">{trait}</span>
                 ))}
               </div>
               <button onClick={() => setCurrentPage('chat-miri')} className="w-full py-3 bg-rose-500 text-white rounded-full font-semibold hover:bg-rose-600">
-                Talk to Miri
+                {t('guides.miri.button')}
               </button>
             </div>
           </div>
@@ -296,18 +379,18 @@ function HomePage({ setCurrentPage }) {
       <section className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">Why Forward Together</span>
-            <h2 className="font-serif text-4xl font-medium text-slate-800 mt-3">Built different. For a reason.</h2>
+            <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">{t('features.label')}</span>
+            <h2 className="font-serif text-4xl font-medium text-slate-800 mt-3">{t('features.title')}</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: '💬', title: 'No Forms, Just Conversation', desc: 'Our AI understands context, not checkboxes.' },
-              { icon: '🤝', title: 'Real Peer Matching', desc: 'Same cancer, same stage, same life situation.' },
-              { icon: '🔒', title: 'Your Story, Your Control', desc: 'Choose what to share. Privacy is sacred.' },
-              { icon: '🌙', title: 'Available 24/7', desc: "Cancer doesn't keep office hours. Neither do we." },
-              { icon: '💡', title: 'Collective Wisdom', desc: 'Learn from thousands of journeys.' },
-              { icon: '❤️', title: 'Give Back When Ready', desc: "Turn your experience into someone else's hope." },
+              { icon: '💬', title: t('features.feature1Title'), desc: t('features.feature1Desc') },
+              { icon: '🤝', title: t('features.feature2Title'), desc: t('features.feature2Desc') },
+              { icon: '🔒', title: t('features.feature3Title'), desc: t('features.feature3Desc') },
+              { icon: '🌙', title: t('features.feature4Title'), desc: t('features.feature4Desc') },
+              { icon: '💡', title: t('features.feature5Title'), desc: t('features.feature5Desc') },
+              { icon: '❤️', title: t('features.feature6Title'), desc: t('features.feature6Desc') },
             ].map((f, i) => (
               <div key={i} className="bg-stone-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <span className="text-4xl mb-4 block">{f.icon}</span>
@@ -326,49 +409,68 @@ function HomePage({ setCurrentPage }) {
 }
 
 function CTASection({ setCurrentPage }) {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 px-6 bg-stone-50">
       <div className="max-w-3xl mx-auto text-center">
         <Logo size={80} />
-        <h2 className="font-serif text-4xl font-medium text-slate-800 mt-6 mb-4">Ready to take the first step?</h2>
-        <p className="text-xl text-stone-600 mb-8">You don't have to figure this out alone.</p>
+        <h2 className="font-serif text-4xl font-medium text-slate-800 mt-6 mb-4">{t('cta.title')}</h2>
+        <p className="text-xl text-stone-600 mb-8">{t('cta.subtitle')}</p>
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           <button onClick={() => setCurrentPage('chat-bob')} className="px-8 py-4 bg-teal-600 text-white rounded-full text-lg font-semibold hover:bg-teal-700 shadow-lg">
-            I'm a Survivor
+            {t('cta.imSurvivor')}
           </button>
           <button onClick={() => setCurrentPage('chat-miri')} className="px-8 py-4 bg-rose-500 text-white rounded-full text-lg font-semibold hover:bg-rose-600 shadow-lg">
-            I'm a Caregiver
+            {t('cta.imCaregiver')}
           </button>
         </div>
-        <p className="text-stone-500">Free. Private.</p>
+        <p className="text-stone-500">{t('cta.freePrivate')}</p>
       </div>
     </section>
   );
 }
 
 function HowItWorksPage({ setCurrentPage }) {
+  const { t } = useLanguage();
+
   return (
     <>
-      <PageHero label="How It Works" title="From overwhelmed" highlight="to supported" subtitle="We've reimagined what cancer support can be." />
+      <PageHero
+        label={t('howItWorksPage.label')}
+        title={t('howItWorksPage.title')}
+        highlight={t('howItWorksPage.highlight')}
+        subtitle={t('howItWorksPage.subtitle')}
+      />
       <HomePage setCurrentPage={setCurrentPage} />
     </>
   );
 }
 
 function ForSurvivorsPage({ setCurrentPage }) {
+  const { t } = useLanguage();
+
   return (
     <>
-      <PageHero label="For Survivors" title="You've already shown incredible strength." highlight="Let us walk with you." subtitle="Connect with people who get it — because they've lived it." ctaText="Talk to Bob →" ctaAction={() => setCurrentPage('chat-bob')} ctaColor="bg-teal-600 hover:bg-teal-700" />
-      
+      <PageHero
+        label={t('forSurvivors.label')}
+        title={t('forSurvivors.title')}
+        highlight={t('forSurvivors.highlight')}
+        subtitle={t('forSurvivors.subtitle')}
+        ctaText={t('forSurvivors.ctaText')}
+        ctaAction={() => setCurrentPage('chat-bob')}
+        ctaColor="bg-teal-600 hover:bg-teal-700"
+      />
+
       <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-serif text-3xl font-medium text-slate-800 text-center mb-12">We understand where you are</h2>
+          <h2 className="font-serif text-3xl font-medium text-slate-800 text-center mb-12">{t('forSurvivors.sectionTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: '🌅', title: 'Just Diagnosed', desc: "The world shifted. You need someone who knows it gets better." },
-              { icon: '💪', title: 'In Treatment', desc: "Connect with others who know exactly what you're going through." },
-              { icon: '🌟', title: 'Post-Treatment', desc: '"Scanxiety" is real. Others understand.' },
-              { icon: '🌈', title: 'Long-term Survivorship', desc: "Share your wisdom. Help someone beginning their journey." },
+              { icon: '🌅', title: t('forSurvivors.stage1Title'), desc: t('forSurvivors.stage1Desc') },
+              { icon: '💪', title: t('forSurvivors.stage2Title'), desc: t('forSurvivors.stage2Desc') },
+              { icon: '🌟', title: t('forSurvivors.stage3Title'), desc: t('forSurvivors.stage3Desc') },
+              { icon: '🌈', title: t('forSurvivors.stage4Title'), desc: t('forSurvivors.stage4Desc') },
             ].map((p, i) => (
               <div key={i} className="bg-stone-50 rounded-2xl p-8">
                 <span className="text-4xl mb-4 block">{p.icon}</span>
@@ -385,18 +487,28 @@ function ForSurvivorsPage({ setCurrentPage }) {
 }
 
 function ForCaregiversPage({ setCurrentPage }) {
+  const { t } = useLanguage();
+
   return (
     <>
-      <PageHero label="For Caregivers" title="You're showing up every day." highlight="Who's showing up for you?" subtitle="Forward Together sees you as someone who needs support too." ctaText="Talk to Miri →" ctaAction={() => setCurrentPage('chat-miri')} ctaColor="bg-rose-500 hover:bg-rose-600" />
-      
+      <PageHero
+        label={t('forCaregivers.label')}
+        title={t('forCaregivers.title')}
+        highlight={t('forCaregivers.highlight')}
+        subtitle={t('forCaregivers.subtitle')}
+        ctaText={t('forCaregivers.ctaText')}
+        ctaAction={() => setCurrentPage('chat-miri')}
+        ctaColor="bg-rose-500 hover:bg-rose-600"
+      />
+
       <section className="py-24 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl font-medium text-slate-800 text-center mb-12">We see what you carry</h2>
+          <h2 className="font-serif text-3xl font-medium text-slate-800 text-center mb-12">{t('forCaregivers.sectionTitle')}</h2>
           <div className="space-y-6">
             {[
-              { quote: '"I feel guilty taking time for myself."', response: "Your needs matter too." },
-              { quote: '"Nobody asks how I\'m doing."', response: "We ask. Your feelings are welcome here." },
-              { quote: '"Sometimes I feel resentful, then awful."', response: "That's normal. You're exhausted." },
+              { quote: t('forCaregivers.quote1'), response: t('forCaregivers.response1') },
+              { quote: t('forCaregivers.quote2'), response: t('forCaregivers.response2') },
+              { quote: t('forCaregivers.quote3'), response: t('forCaregivers.response3') },
             ].map((item, i) => (
               <div key={i} className="bg-stone-50 rounded-2xl p-8">
                 <p className="font-serif text-2xl italic text-rose-600 mb-4">{item.quote}</p>
@@ -412,15 +524,36 @@ function ForCaregiversPage({ setCurrentPage }) {
 }
 
 function StoriesPage({ setCurrentPage }) {
+  const { t } = useLanguage();
+
   const stories = [
-    { name: 'Sarah', color: 'bg-amber-500', role: 'Breast Cancer Survivor', headline: '"Bob was there at 3 AM"', story: "I felt completely alone. Bob responded with such gentleness. He connected me with Maria, who had the same cancer. That connection carried me through.", outcome: 'Now 2 years cancer-free.' },
-    { name: 'Michael', color: 'bg-teal-500', role: 'Caregiver', headline: '"Miri asked how I was doing"', story: 'Everyone asked about my wife. Miri asked about ME. It was the first time someone acknowledged what I was carrying.', outcome: 'Now mentors other caregivers.' },
+    {
+      name: t('stories.sarah.name'),
+      color: 'bg-amber-500',
+      role: t('stories.sarah.role'),
+      headline: t('stories.sarah.headline'),
+      story: t('stories.sarah.story'),
+      outcome: t('stories.sarah.outcome')
+    },
+    {
+      name: t('stories.michael.name'),
+      color: 'bg-teal-500',
+      role: t('stories.michael.role'),
+      headline: t('stories.michael.headline'),
+      story: t('stories.michael.story'),
+      outcome: t('stories.michael.outcome')
+    },
   ];
 
   return (
     <>
-      <PageHero label="Stories" title="Real people. Real journeys." highlight="Real connection." subtitle="Here are some of their stories." />
-      
+      <PageHero
+        label={t('stories.label')}
+        title={t('stories.title')}
+        highlight={t('stories.highlight')}
+        subtitle={t('stories.subtitle')}
+      />
+
       <section className="py-24 px-6 bg-white">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
           {stories.map((s, i) => (
@@ -435,7 +568,7 @@ function StoriesPage({ setCurrentPage }) {
               <p className="font-serif text-xl italic text-teal-700 mb-4">{s.headline}</p>
               <p className="text-stone-600 mb-4">{s.story}</p>
               <div className="bg-white rounded-xl p-4 text-sm">
-                <strong className="text-teal-600">Today:</strong> {s.outcome}
+                <strong className="text-teal-600">{t('stories.today')}</strong> {s.outcome}
               </div>
             </div>
           ))}
@@ -449,6 +582,7 @@ function StoriesPage({ setCurrentPage }) {
 function GetStartedPage({ setCurrentPage }) {
   const [step, setStep] = useState('choice');
   const [journeyType, setJourneyType] = useState(null);
+  const { t } = useLanguage();
 
   if (step === 'chat') return <ChatInterface journeyType={journeyType} onBack={() => setCurrentPage('home')} />;
 
@@ -456,24 +590,24 @@ function GetStartedPage({ setCurrentPage }) {
     <section className="min-h-screen py-24 px-6 bg-stone-50 flex items-center">
       <div className="max-w-4xl mx-auto text-center">
         <button onClick={() => setCurrentPage('home')} className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-stone-600 hover:text-stone-800 hover:bg-stone-200 rounded-full transition-colors">
-          <span className="text-lg">←</span> Back to Home
+          <span className="text-lg">←</span> {t('getStarted.backToHome').replace('← ', '')}
         </button>
-        <h1 className="font-serif text-4xl font-medium text-slate-800 mb-4">Welcome to Forward Together</h1>
-        <p className="text-xl text-stone-600 mb-12">We're here for you.</p>
-        
+        <h1 className="font-serif text-4xl font-medium text-slate-800 mb-4">{t('getStarted.welcome')}</h1>
+        <p className="text-xl text-stone-600 mb-12">{t('getStarted.weAreHere')}</p>
+
         <div className="grid md:grid-cols-2 gap-8">
           <button onClick={() => { setJourneyType('survivor'); setStep('chat'); }} className="bg-white rounded-3xl p-10 text-center border-2 border-transparent hover:border-teal-500 hover:shadow-xl transition-all">
             <div className="w-24 h-24 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full mx-auto mb-6" />
-            <h2 className="font-serif text-2xl font-semibold text-slate-800 mb-3">I'm facing a diagnosis</h2>
-            <p className="text-stone-600 mb-6">Talk to Bob, a survivor guide.</p>
-            <span className="text-teal-600 font-semibold">Meet Bob →</span>
+            <h2 className="font-serif text-2xl font-semibold text-slate-800 mb-3">{t('getStarted.facingDiagnosis')}</h2>
+            <p className="text-stone-600 mb-6">{t('getStarted.talkToBob')}</p>
+            <span className="text-teal-600 font-semibold">{t('getStarted.meetBob')}</span>
           </button>
-          
+
           <button onClick={() => { setJourneyType('caregiver'); setStep('chat'); }} className="bg-white rounded-3xl p-10 text-center border-2 border-transparent hover:border-rose-500 hover:shadow-xl transition-all">
             <div className="w-24 h-24 bg-gradient-to-br from-rose-500 to-rose-700 rounded-full mx-auto mb-6" />
-            <h2 className="font-serif text-2xl font-semibold text-slate-800 mb-3">I'm caring for someone</h2>
-            <p className="text-stone-600 mb-6">Talk to Miri, a caregiver guide.</p>
-            <span className="text-rose-600 font-semibold">Meet Miri →</span>
+            <h2 className="font-serif text-2xl font-semibold text-slate-800 mb-3">{t('getStarted.caringForSomeone')}</h2>
+            <p className="text-stone-600 mb-6">{t('getStarted.talkToMiri')}</p>
+            <span className="text-rose-600 font-semibold">{t('getStarted.meetMiri')}</span>
           </button>
         </div>
       </div>
@@ -481,103 +615,18 @@ function GetStartedPage({ setCurrentPage }) {
   );
 }
 
-// Scripted conversation for Bob (Survivor Guide)
-const bobConversation = [
-  { sender: 'bot', text: "Hey. I'm Bob." },
-  { sender: 'bot', text: "I'm a survivor too." },
-  { sender: 'bot', text: "Can you tell me what's going on?" },
-  { sender: 'user', text: "I just got diagnosed yesterday. Breast cancer. I don't even know where to start." },
-  { sender: 'bot', text: "I'm really glad you reached out. Yesterday... that's so fresh. How are you feeling right now?" },
-  { sender: 'user', text: "Honestly? Terrified. I couldn't sleep at all last night." },
-  { sender: 'bot', text: "That makes complete sense. I remember that feeling. The world looks different after those words, doesn't it?" },
-  { sender: 'user', text: "Yes. Everything feels surreal. Like I'm watching someone else's life." },
-  { sender: 'bot', text: "That disconnected feeling is so common in the first days. Your mind is trying to process something huge." },
-  { sender: 'bot', text: "Can I ask - do you have someone with you right now?" },
-  { sender: 'user', text: "My sister is here. She's been amazing but I can tell she's scared too." },
-  { sender: 'bot', text: "It's good you're not alone. And it's okay that she's scared. You can be scared together." },
-  { sender: 'user', text: "I have so many questions but I don't even know what to ask." },
-  { sender: 'bot', text: "That's completely normal. You don't need to have it all figured out right now." },
-  { sender: 'bot', text: "In my experience, the questions come when they're ready. And we'll be here for each one." },
-  { sender: 'user', text: "When you were diagnosed, what helped you the most in those first days?" },
-  { sender: 'bot', text: "Honestly? Talking to someone who'd been through it. Someone who could tell me that this chaotic feeling wouldn't last forever." },
-  { sender: 'bot', text: "The medical stuff was important, but having someone who just got it... that's what carried me through." },
-  { sender: 'user', text: "That's why I came here. My doctor gave me pamphlets but I needed something more human." },
-  { sender: 'bot', text: "Pamphlets don't hold your hand at 3am. I understand." },
-  { sender: 'user', text: "Exactly. Do you think... will I be okay?" },
-  { sender: 'bot', text: "I can't promise what your journey will look like. But I can tell you that you're stronger than you know right now." },
-  { sender: 'bot', text: "And you won't walk this path alone. That I can promise." },
-  { sender: 'user', text: "That actually helps. Just knowing someone understands." },
-  { sender: 'bot', text: "I do understand. And there are thousands of survivors in our community who understand too." },
-  { sender: 'user', text: "I think I'd like to connect with someone who had a similar diagnosis. Is that possible?" },
-  { sender: 'bot', text: "Absolutely. That's exactly what we do here. I can help match you with someone who's been where you are." },
-  { sender: 'bot', text: "Someone who knows the specific fears, the specific questions, the specific victories." },
-  { sender: 'user', text: "That would mean so much. I feel less alone already just talking to you." },
-  { sender: 'bot', text: "You ARE less alone. You found us, and that took courage." },
-  { sender: 'user', text: "I don't feel very courageous right now." },
-  { sender: 'bot', text: "Courage isn't the absence of fear. It's reaching out when you're terrified. You did that today." },
-  { sender: 'user', text: "I never thought of it that way." },
-  { sender: 'bot', text: "One day at a time. Sometimes one hour at a time. That's how we do this." },
-  { sender: 'user', text: "Thank you, Bob. Really." },
-  { sender: 'bot', text: "I'm here whenever you need me. Day or night. That's what Forward Together is about." },
-  { sender: 'bot', text: "You're not alone in this. Not anymore." },
-];
-
-// Scripted conversation for Miri (Caregiver Guide)
-const miriConversation = [
-  { sender: 'bot', text: "Hi. I'm Miri." },
-  { sender: 'bot', text: "I see you too." },
-  { sender: 'bot', text: "How are you holding up?" },
-  { sender: 'user', text: "Honestly, I don't even know. My husband was diagnosed with lymphoma three weeks ago." },
-  { sender: 'bot', text: "Three weeks. You're still in the thick of it. I'm glad you reached out." },
-  { sender: 'bot', text: "Can I ask - how are YOU doing? Not him. You." },
-  { sender: 'user', text: "Nobody asks me that. Everyone asks about Tom." },
-  { sender: 'bot', text: "I know. That's why I'm asking. Your feelings matter too." },
-  { sender: 'user', text: "I feel guilty even talking about myself. He's the one who's sick." },
-  { sender: 'bot', text: "There's no guilt needed here. Caring for someone takes everything you have. Your struggles are real." },
-  { sender: 'user', text: "I'm exhausted. I haven't slept properly in weeks. I'm trying to be strong for him and the kids." },
-  { sender: 'bot', text: "That's such a heavy weight to carry. Being strong for everyone while processing your own fear." },
-  { sender: 'user', text: "Sometimes I feel so angry. And then I feel awful for being angry." },
-  { sender: 'bot', text: "Anger is a normal part of this. It doesn't make you a bad person or a bad caregiver." },
-  { sender: 'bot', text: "You're allowed to feel angry at the situation. At cancer. At the unfairness of it all." },
-  { sender: 'user', text: "I just want our normal life back." },
-  { sender: 'bot', text: "Of course you do. Grieving the life you had is part of this journey too." },
-  { sender: 'user', text: "I feel like I'm failing at everything. The house is a mess, I forgot my daughter's permission slip..." },
-  { sender: 'bot', text: "You're not failing. You're surviving an impossible situation. Something has to give." },
-  { sender: 'bot', text: "A messy house doesn't mean you're failing. It means you're prioritizing what matters most." },
-  { sender: 'user', text: "I keep thinking I should be handling this better." },
-  { sender: 'bot', text: "There's no 'right way' to handle this. You're doing it, and that's what counts." },
-  { sender: 'user', text: "My mom keeps offering to help but I feel like I should be able to do this myself." },
-  { sender: 'bot', text: "Accepting help isn't weakness. It's wisdom. You can't pour from an empty cup." },
-  { sender: 'bot', text: "What if letting your mom help is actually a gift to her too? A way she can feel useful?" },
-  { sender: 'user', text: "I never thought of it that way." },
-  { sender: 'bot', text: "Caregivers often forget they deserve care too. When's the last time you did something just for you?" },
-  { sender: 'user', text: "I can't even remember. There's no time." },
-  { sender: 'bot', text: "Even ten minutes matters. A cup of tea alone. A short walk. Small things add up." },
-  { sender: 'user', text: "I feel selfish even thinking about myself." },
-  { sender: 'bot', text: "Taking care of yourself isn't selfish. It's necessary. You can't support Tom if you collapse." },
-  { sender: 'user', text: "That's what my sister says too." },
-  { sender: 'bot', text: "She's right. Would you like to connect with other caregivers who understand this?" },
-  { sender: 'user', text: "There are others going through this?" },
-  { sender: 'bot', text: "Many others. Caregivers who know exactly what 3am anxiety feels like. Who understand the isolation." },
-  { sender: 'bot', text: "Sometimes talking to someone who's been there makes all the difference." },
-  { sender: 'user', text: "Yes, I think I'd like that. It would help to not feel so alone in this." },
-  { sender: 'bot', text: "You're not alone. There's a whole community here who sees what you're carrying." },
-  { sender: 'user', text: "Thank you for asking about me, Miri. It means more than you know." },
-  { sender: 'bot', text: "That's what I'm here for. You matter, not just as a caregiver, but as a person." },
-  { sender: 'bot', text: "We're here whenever you need us. You don't have to carry this alone." },
-];
-
 function ChatInterface({ journeyType, onBack }) {
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const [isUserTyping, setIsUserTyping] = useState(false);
   const messagesEndRef = useRef(null);
+  const { t, getConversation } = useLanguage();
 
   const guide = journeyType === 'survivor'
-    ? { name: 'Bob', role: 'Survivor Guide', color: 'bg-teal-600' }
-    : { name: 'Miri', role: 'Caregiver Guide', color: 'bg-rose-500' };
+    ? { name: 'Bob', role: t('chat.survivorGuide'), color: 'bg-teal-600' }
+    : { name: 'Miri', role: t('chat.caregiverGuide'), color: 'bg-rose-500' };
 
-  const conversation = journeyType === 'survivor' ? bobConversation : miriConversation;
+  const conversation = getConversation(journeyType);
 
   useEffect(() => {
     let cancelled = false;
@@ -626,7 +675,7 @@ function ChatInterface({ journeyType, onBack }) {
       cancelled = true;
       clearTimeout(timeout);
     };
-  }, [journeyType]);
+  }, [journeyType, conversation]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -647,7 +696,7 @@ function ChatInterface({ journeyType, onBack }) {
       <div className="w-full max-w-lg mx-4 bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col" style={{ height: 'calc(100% - 2rem)', maxHeight: '650px' }} onTouchMove={(e) => e.stopPropagation()}>
         <div className={`${guide.color} p-5 flex items-center justify-between text-white flex-shrink-0`}>
           <button onClick={onBack} className="flex items-center gap-2 px-3 py-1.5 bg-white/20 hover:bg-white/30 rounded-full font-medium transition-colors">
-            <span className="text-lg">←</span> Back
+            <span className="text-lg">←</span> {t('chat.back')}
           </button>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full" />
@@ -658,7 +707,7 @@ function ChatInterface({ journeyType, onBack }) {
           </div>
           <div className="flex items-center gap-2 text-sm opacity-80">
             <span className="w-2 h-2 bg-green-400 rounded-full" />
-            Online
+            {t('chat.online')}
           </div>
         </div>
 
@@ -694,10 +743,10 @@ function ChatInterface({ journeyType, onBack }) {
         </div>
 
         <div className="p-4 border-t flex-shrink-0">
-          <p className="text-center text-sm text-stone-500 italic">Watching a sample conversation...</p>
+          <p className="text-center text-sm text-stone-500 italic">{t('chat.watchingSample')}</p>
         </div>
 
-        <p className="text-center text-xs text-stone-400 pb-4 flex-shrink-0">Demo only. Full app connects you with real people.</p>
+        <p className="text-center text-xs text-stone-400 pb-4 flex-shrink-0">{t('chat.demoOnly')}</p>
       </div>
     </section>
   );
