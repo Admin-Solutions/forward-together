@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="es" datatype="plaintext" original="forward-together">
+    <body>
+      <!-- Navigation -->
+      <trans-unit id="nav.home">
+        <source>Home</source>
+        <target>Inicio</target>
+      </trans-unit>
+      <trans-unit id="nav.howItWorks">
+        <source>How It Works</source>
+        <target>Cómo funciona</target>
+      </trans-unit>
+      <trans-unit id="nav.forSurvivors">
+        <source>For Survivors</source>
+        <target>Para supervivientes</target>
+      </trans-unit>
+      <trans-unit id="nav.forCaregivers">
+        <source>For Caregivers</source>
+        <target>Para cuidadores</target>
+      </trans-unit>
+      <trans-unit id="nav.stories">
+        <source>Stories</source>
+        <target>Historias</target>
+      </trans-unit>
+      <trans-unit id="nav.beginJourney">
+        <source>Begin Your Journey</source>
+        <target>Comienza tu camino</target>
+      </trans-unit>
+
+      <!-- Brand -->
+      <trans-unit id="brand.forward">
+        <source>Forward</source>
+        <target>Forward</target>
+      </trans-unit>
+      <trans-unit id="brand.together">
+        <source>Together</source>
+        <target>Together</target>
+      </trans-unit>
+      <trans-unit id="brand.tagline">
+        <source>You're not alone in this.</source>
+        <target>No estás solo en esto.</target>
+      </trans-unit>
+
+      <!-- Footer -->
+      <trans-unit id="footer.forYou">
+        <source>For You</source>
+        <target>Para ti</target>
+      </trans-unit>
+      <trans-unit id="footer.about">
+        <source>About</source>
+        <target>Acerca de</target>
+      </trans-unit>
+      <trans-unit id="footer.resources">
+        <source>Resources</source>
+        <target>Recursos</target>
+      </trans-unit>
+      <trans-unit id="footer.forSurvivors">
+        <source>For Survivors</source>
+        <target>Para supervivientes</target>
+      </trans-unit>
+      <trans-unit id="footer.forCaregivers">
+        <source>For Caregivers</source>
+        <target>Para cuidadores</target>
+      </trans-unit>
+      <trans-unit id="footer.getStarted">
+        <source>Get Started</source>
+        <target>Comenzar</target>
+      </trans-unit>
+      <trans-unit id="footer.stories">
+        <source>Stories</source>
+        <target>Historias</target>
+      </trans-unit>
+      <trans-unit id="footer.howItWorks">
+        <source>How It Works</source>
+        <target>Cómo funciona</target>
+      </trans-unit>
+      <trans-unit id="footer.ourStory">
+        <source>Our Story</source>
+        <target>Nuestra historia</target>
+      </trans-unit>
+      <trans-unit id="footer.contactUs">
+        <source>Contact Us</source>
+        <target>Contáctanos</target>
+      </trans-unit>
+      <trans-unit id="footer.helpCenter">
+        <source>Help Center</source>
+        <target>Centro de ayuda</target>
+      </trans-unit>
+      <trans-unit id="footer.privacyPolicy">
+        <source>Privacy Policy</source>
+        <target>Política de privacidad</target>
+      </trans-unit>
+      <trans-unit id="footer.termsOfService">
+        <source>Terms of Service</source>
+        <target>Términos de servicio</target>
+      </trans-unit>
+      <trans-unit id="footer.copyright">
+        <source>© 2025 Forward Together Project. All rights reserved.</source>
+        <target>© 2025 Proyecto Forward Together. Todos los derechos reservados.</target>
+      </trans-unit>
+      <trans-unit id="footer.builtBy">
+        <source>Built by survivors, for survivors. Because no one should face cancer alone.</source>
+        <target>Creado por supervivientes, para supervivientes. Porque nadie debería enfrentarse al cáncer solo.</target>
+      </trans-unit>
+
+      <!-- Hero Section -->
+      <trans-unit id="hero.title1">
+        <source>You don't have to</source>
+        <target>No tienes que</target>
+      </trans-unit>
+      <trans-unit id="hero.title2">
+        <source>face this alone</source>
+        <target>afrontar esto solo</target>
+      </trans-unit>
+      <trans-unit id="hero.description">
+        <source>Whether you're navigating a cancer diagnosis or caring for someone who is, Forward Together connects you with people who truly understand — because they've walked the same path.</source>
+        <target>Tanto si te enfrentas a un diagnóstico de cáncer como si estás cuidando a alguien que lo tiene, Forward Together te conecta con otras personas que realmente comprenden tu situación porque han recorrido el mismo camino.</target>
+      </trans-unit>
+      <trans-unit id="hero.startJourney">
+        <source>Start Your Journey →</source>
+        <target>Comienza tu camino →</target>
+      </trans-unit>
+      <trans-unit id="hero.seeHowItWorks">
+        <source>See How It Works</source>
+        <target>Ver cómo funciona</target>
+      </trans-unit>
+      <trans-unit id="hero.joinWith">
+        <source>Join with other survivors and caregivers</source>
+        <target>Únete a otros supervivientes y cuidadores</target>
+      </trans-unit>
+
+      <!-- Chat Preview -->
+      <trans-unit id="chatPreview.bob">
+        <source>Bob</source>
+        <target>Bob</target>
+      </trans-unit>
+      <trans-unit id="chatPreview.yourSurvivorGuide">
+        <source>Your Survivor Guide</source>
+        <target>Tu guía de superviviente</target>
+      </trans-unit>
+      <trans-unit id="chatPreview.msg1">
+        <source>Hey. I'm Bob. I'm a survivor too. I remember what it felt like in the beginning.</source>
+        <target>Hola, soy Bob. Yo también soy un superviviente. Recuerdo cómo me sentía al principio.</target>
+      </trans-unit>
+      <trans-unit id="chatPreview.msg2">
+        <source>Someone helped me back then. That's what I'm here to do for you.</source>
+        <target>Alguien me ayudó en aquel momento. Eso es lo que yo estoy aquí para hacer por ti.</target>
+      </trans-unit>
+      <trans-unit id="chatPreview.msg3">
+        <source>I just found out yesterday. I don't even know where to start...</source>
+        <target>Me acabo de enterar ayer. Ni siquiera sé por dónde empezar...</target>
+      </trans-unit>
+      <trans-unit id="chatPreview.msg4">
+        <source>That's okay. You don't have to have it figured out. Can you tell me a little about what's going on?</source>
+        <target>No pasa nada. No tienes que tenerlo todo claro. ¿Me puedes contar un poco qué está pasando?</target>
+      </trans-unit>
+
+      <!-- How It Works Section -->
+      <trans-unit id="howItWorks.label">
+        <source>How It Works</source>
+        <target>Cómo funciona</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.title1">
+        <source>From overwhelmed to</source>
+        <target>De abrumado a</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.title2">
+        <source>supported</source>
+        <target>apoyado</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.subtitle">
+        <source>No clinical questionnaires. No waiting rooms. Just meaningful connection.</source>
+        <target>Sin cuestionarios clínicos. Sin salas de espera. Solo conexión significativa.</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.step1Title">
+        <source>Share Your Story</source>
+        <target>Comparte tu historia</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.step1Desc">
+        <source>No forms. Just conversation.</source>
+        <target>Sin formularios. Solo conversación.</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.step2Title">
+        <source>Get Understood</source>
+        <target>Sé comprendido</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.step2Desc">
+        <source>AI guides respond with genuine empathy.</source>
+        <target>Los guías de IA responden con empatía genuina.</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.step3Title">
+        <source>Find Your People</source>
+        <target>Encuentra a tu gente</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.step3Desc">
+        <source>Connect with those who've walked your path.</source>
+        <target>Conecta con quienes han recorrido tu camino.</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.step4Title">
+        <source>Move Forward Together</source>
+        <target>Avancemos juntos</target>
+      </trans-unit>
+      <trans-unit id="howItWorks.step4Desc">
+        <source>Build connections. Help others.</source>
+        <target>Construye conexiones. Ayuda a otros.</target>
+      </trans-unit>
+
+      <!-- Guides Section -->
+      <trans-unit id="guides.label">
+        <source>Meet Your Guides</source>
+        <target>Conoce a tus guías</target>
+      </trans-unit>
+      <trans-unit id="guides.title">
+        <source>Always here. Always understanding.</source>
+        <target>Siempre aquí. Siempre comprendiendo.</target>
+      </trans-unit>
+      <trans-unit id="guides.bob.name">
+        <source>Bob</source>
+        <target>Bob</target>
+      </trans-unit>
+      <trans-unit id="guides.bob.role">
+        <source>Survivor Guide</source>
+        <target>Guía de superviviente</target>
+      </trans-unit>
+      <trans-unit id="guides.bob.description">
+        <source>A survivor himself, Bob understands the weight of those first days. He's here to listen and share wisdom from thousands of survivors.</source>
+        <target>Como superviviente, Bob comprende el peso de esos primeros días. Está aquí para escuchar y compartir la sabiduría de miles de supervivientes.</target>
+      </trans-unit>
+      <trans-unit id="guides.bob.trait1">
+        <source>Warm &amp; steady</source>
+        <target>Cálido y estable</target>
+      </trans-unit>
+      <trans-unit id="guides.bob.trait2">
+        <source>Been there</source>
+        <target>Lo ha vivido</target>
+      </trans-unit>
+      <trans-unit id="guides.bob.trait3">
+        <source>No judgment</source>
+        <target>Sin juicios</target>
+      </trans-unit>
+      <trans-unit id="guides.bob.button">
+        <source>Talk to Bob</source>
+        <target>Habla con Bob</target>
+      </trans-unit>
+      <trans-unit id="guides.miri.name">
+        <source>Miri</source>
+        <target>Miri</target>
+      </trans-unit>
+      <trans-unit id="guides.miri.role">
+        <source>Caregiver Guide</source>
+        <target>Guía de cuidador</target>
+      </trans-unit>
+      <trans-unit id="guides.miri.description">
+        <source>Miri sees you — not just as a caregiver, but as someone carrying an invisible weight. Your needs matter too.</source>
+        <target>Miri te ve — no solo como cuidador, sino como alguien que lleva un peso invisible. Tus necesidades también importan.</target>
+      </trans-unit>
+      <trans-unit id="guides.miri.trait1">
+        <source>Compassionate</source>
+        <target>Compasiva</target>
+      </trans-unit>
+      <trans-unit id="guides.miri.trait2">
+        <source>Practical</source>
+        <target>Práctica</target>
+      </trans-unit>
+      <trans-unit id="guides.miri.trait3">
+        <source>Sees your struggle</source>
+        <target>Ve tu lucha</target>
+      </trans-unit>
+      <trans-unit id="guides.miri.button">
+        <source>Talk to Miri</source>
+        <target>Habla con Miri</target>
+      </trans-unit>
+
+      <!-- Features Section -->
+      <trans-unit id="features.label">
+        <source>Why Forward Together</source>
+        <target>Por qué Forward Together</target>
+      </trans-unit>
+      <trans-unit id="features.title">
+        <source>Built different. For a reason.</source>
+        <target>Diferente. Por una razón.</target>
+      </trans-unit>
+      <trans-unit id="features.feature1Title">
+        <source>No Forms, Just Conversation</source>
+        <target>Sin formularios, solo conversación</target>
+      </trans-unit>
+      <trans-unit id="features.feature1Desc">
+        <source>Our AI understands context, not checkboxes.</source>
+        <target>Nuestra IA entiende el contexto, no las casillas.</target>
+      </trans-unit>
+      <trans-unit id="features.feature2Title">
+        <source>Real Peer Matching</source>
+        <target>Emparejamiento real entre pares</target>
+      </trans-unit>
+      <trans-unit id="features.feature2Desc">
+        <source>Same cancer, same stage, same life situation.</source>
+        <target>Mismo cáncer, misma etapa, misma situación de vida.</target>
+      </trans-unit>
+      <trans-unit id="features.feature3Title">
+        <source>Your Story, Your Control</source>
+        <target>Tu historia, tu control</target>
+      </trans-unit>
+      <trans-unit id="features.feature3Desc">
+        <source>Choose what to share. Privacy is sacred.</source>
+        <target>Elige qué compartir. La privacidad es sagrada.</target>
+      </trans-unit>
+      <trans-unit id="features.feature4Title">
+        <source>Available 24/7</source>
+        <target>Disponible 24/7</target>
+      </trans-unit>
+      <trans-unit id="features.feature4Desc">
+        <source>Cancer doesn't keep office hours. Neither do we.</source>
+        <target>El cáncer no tiene horario de oficina. Nosotros tampoco.</target>
+      </trans-unit>
+      <trans-unit id="features.feature5Title">
+        <source>Collective Wisdom</source>
+        <target>Sabiduría colectiva</target>
+      </trans-unit>
+      <trans-unit id="features.feature5Desc">
+        <source>Learn from thousands of journeys.</source>
+        <target>Aprende de miles de experiencias.</target>
+      </trans-unit>
+      <trans-unit id="features.feature6Title">
+        <source>Give Back When Ready</source>
+        <target>Devuelve cuando estés listo</target>
+      </trans-unit>
+      <trans-unit id="features.feature6Desc">
+        <source>Turn your experience into someone else's hope.</source>
+        <target>Convierte tu experiencia en la esperanza de otro.</target>
+      </trans-unit>
+
+      <!-- CTA Section -->
+      <trans-unit id="cta.title">
+        <source>Ready to take the first step?</source>
+        <target>¿Listo para dar el primer paso?</target>
+      </trans-unit>
+      <trans-unit id="cta.subtitle">
+        <source>You don't have to figure this out alone.</source>
+        <target>No tienes que resolver esto solo.</target>
+      </trans-unit>
+      <trans-unit id="cta.imSurvivor">
+        <source>I'm a Survivor</source>
+        <target>Soy superviviente</target>
+      </trans-unit>
+      <trans-unit id="cta.imCaregiver">
+        <source>I'm a Caregiver</source>
+        <target>Soy cuidador</target>
+      </trans-unit>
+      <trans-unit id="cta.freePrivate">
+        <source>Free. Private.</source>
+        <target>Gratis. Privado.</target>
+      </trans-unit>
+
+      <!-- For Survivors Page -->
+      <trans-unit id="forSurvivors.label">
+        <source>For Survivors</source>
+        <target>Para supervivientes</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.title">
+        <source>You've already shown incredible strength.</source>
+        <target>Ya has demostrado una fuerza increíble.</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.highlight">
+        <source>Let us walk with you.</source>
+        <target>Déjanos acompañarte.</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.subtitle">
+        <source>Connect with people who get it — because they've lived it.</source>
+        <target>Conecta con personas que lo entienden — porque lo han vivido.</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.ctaText">
+        <source>Talk to Bob →</source>
+        <target>Habla con Bob →</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.sectionTitle">
+        <source>We understand where you are</source>
+        <target>Entendemos dónde estás</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.stage1Title">
+        <source>Just Diagnosed</source>
+        <target>Recién diagnosticado</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.stage1Desc">
+        <source>The world shifted. You need someone who knows it gets better.</source>
+        <target>El mundo cambió. Necesitas a alguien que sabe que mejora.</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.stage2Title">
+        <source>In Treatment</source>
+        <target>En tratamiento</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.stage2Desc">
+        <source>Connect with others who know exactly what you're going through.</source>
+        <target>Conecta con otros que saben exactamente por lo que estás pasando.</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.stage3Title">
+        <source>Post-Treatment</source>
+        <target>Post-tratamiento</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.stage3Desc">
+        <source>"Scanxiety" is real. Others understand.</source>
+        <target>La "ansiedad de las pruebas" es real. Otros lo entienden.</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.stage4Title">
+        <source>Long-term Survivorship</source>
+        <target>Supervivencia a largo plazo</target>
+      </trans-unit>
+      <trans-unit id="forSurvivors.stage4Desc">
+        <source>Share your wisdom. Help someone beginning their journey.</source>
+        <target>Comparte tu sabiduría. Ayuda a alguien que empieza su camino.</target>
+      </trans-unit>
+
+      <!-- For Caregivers Page -->
+      <trans-unit id="forCaregivers.label">
+        <source>For Caregivers</source>
+        <target>Para cuidadores</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.title">
+        <source>You're showing up every day.</source>
+        <target>Estás presente cada día.</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.highlight">
+        <source>Who's showing up for you?</source>
+        <target>¿Quién está presente para ti?</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.subtitle">
+        <source>Forward Together sees you as someone who needs support too.</source>
+        <target>Forward Together te ve como alguien que también necesita apoyo.</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.ctaText">
+        <source>Talk to Miri →</source>
+        <target>Habla con Miri →</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.sectionTitle">
+        <source>We see what you carry</source>
+        <target>Vemos lo que llevas</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.quote1">
+        <source>"I feel guilty taking time for myself."</source>
+        <target>"Me siento culpable por tomarme tiempo para mí."</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.response1">
+        <source>Your needs matter too.</source>
+        <target>Tus necesidades también importan.</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.quote2">
+        <source>"Nobody asks how I'm doing."</source>
+        <target>"Nadie pregunta cómo estoy yo."</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.response2">
+        <source>We ask. Your feelings are welcome here.</source>
+        <target>Nosotros preguntamos. Tus sentimientos son bienvenidos aquí.</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.quote3">
+        <source>"Sometimes I feel resentful, then awful."</source>
+        <target>"A veces siento resentimiento, y luego me siento fatal."</target>
+      </trans-unit>
+      <trans-unit id="forCaregivers.response3">
+        <source>That's normal. You're exhausted.</source>
+        <target>Es normal. Estás agotado.</target>
+      </trans-unit>
+
+      <!-- Stories Page -->
+      <trans-unit id="stories.label">
+        <source>Stories</source>
+        <target>Historias</target>
+      </trans-unit>
+      <trans-unit id="stories.title">
+        <source>Real people. Real journeys.</source>
+        <target>Personas reales. Caminos reales.</target>
+      </trans-unit>
+      <trans-unit id="stories.highlight">
+        <source>Real connection.</source>
+        <target>Conexión real.</target>
+      </trans-unit>
+      <trans-unit id="stories.subtitle">
+        <source>Here are some of their stories.</source>
+        <target>Aquí están algunas de sus historias.</target>
+      </trans-unit>
+      <trans-unit id="stories.today">
+        <source>Today:</source>
+        <target>Hoy:</target>
+      </trans-unit>
+      <trans-unit id="stories.sarah.name">
+        <source>Sarah</source>
+        <target>Sara</target>
+      </trans-unit>
+      <trans-unit id="stories.sarah.role">
+        <source>Breast Cancer Survivor</source>
+        <target>Superviviente de Cáncer de Mama</target>
+      </trans-unit>
+      <trans-unit id="stories.sarah.headline">
+        <source>"Bob was there at 3 AM"</source>
+        <target>"Bob estuvo ahí a las 3 de la madrugada"</target>
+      </trans-unit>
+      <trans-unit id="stories.sarah.story">
+        <source>I felt completely alone. Bob responded with such gentleness. He connected me with Maria, who had the same cancer. That connection carried me through.</source>
+        <target>Me sentía completamente sola. Bob respondió con tanta delicadeza. Me conectó con María, que había tenido el mismo cáncer. Esa conexión me ayudó a salir adelante.</target>
+      </trans-unit>
+      <trans-unit id="stories.sarah.outcome">
+        <source>Now 2 years cancer-free.</source>
+        <target>Ahora lleva 2 años libre de cáncer.</target>
+      </trans-unit>
+      <trans-unit id="stories.michael.name">
+        <source>Michael</source>
+        <target>Miguel</target>
+      </trans-unit>
+      <trans-unit id="stories.michael.role">
+        <source>Caregiver</source>
+        <target>Cuidador</target>
+      </trans-unit>
+      <trans-unit id="stories.michael.headline">
+        <source>"Miri asked how I was doing"</source>
+        <target>"Miri me preguntó cómo estaba yo"</target>
+      </trans-unit>
+      <trans-unit id="stories.michael.story">
+        <source>Everyone asked about my wife. Miri asked about ME. It was the first time someone acknowledged what I was carrying.</source>
+        <target>Todo el mundo preguntaba por mi mujer. Miri preguntó por MÍ. Fue la primera vez que alguien reconoció lo que yo estaba cargando.</target>
+      </trans-unit>
+      <trans-unit id="stories.michael.outcome">
+        <source>Now mentors other caregivers.</source>
+        <target>Ahora es mentor de otros cuidadores.</target>
+      </trans-unit>
+
+      <!-- Get Started Page -->
+      <trans-unit id="getStarted.backToHome">
+        <source>← Back to Home</source>
+        <target>← Volver al Inicio</target>
+      </trans-unit>
+      <trans-unit id="getStarted.welcome">
+        <source>Welcome to Forward Together</source>
+        <target>Bienvenido a Forward Together</target>
+      </trans-unit>
+      <trans-unit id="getStarted.weAreHere">
+        <source>We're here for you.</source>
+        <target>Estamos aquí para ti.</target>
+      </trans-unit>
+      <trans-unit id="getStarted.facingDiagnosis">
+        <source>I'm facing a diagnosis</source>
+        <target>Tengo un diagnóstico</target>
+      </trans-unit>
+      <trans-unit id="getStarted.talkToBob">
+        <source>Talk to Bob, a survivor guide.</source>
+        <target>Habla con Bob, un guía superviviente.</target>
+      </trans-unit>
+      <trans-unit id="getStarted.meetBob">
+        <source>Meet Bob →</source>
+        <target>Conoce a Bob →</target>
+      </trans-unit>
+      <trans-unit id="getStarted.caringForSomeone">
+        <source>I'm caring for someone</source>
+        <target>Cuido de alguien</target>
+      </trans-unit>
+      <trans-unit id="getStarted.talkToMiri">
+        <source>Talk to Miri, a caregiver guide.</source>
+        <target>Habla con Miri, una guía de cuidadores.</target>
+      </trans-unit>
+      <trans-unit id="getStarted.meetMiri">
+        <source>Meet Miri →</source>
+        <target>Conoce a Miri →</target>
+      </trans-unit>
+
+      <!-- Chat Interface -->
+      <trans-unit id="chat.back">
+        <source>Back</source>
+        <target>Volver</target>
+      </trans-unit>
+      <trans-unit id="chat.online">
+        <source>Online</source>
+        <target>En línea</target>
+      </trans-unit>
+      <trans-unit id="chat.survivorGuide">
+        <source>Survivor Guide</source>
+        <target>Guía de Superviviente</target>
+      </trans-unit>
+      <trans-unit id="chat.caregiverGuide">
+        <source>Caregiver Guide</source>
+        <target>Guía de Cuidador</target>
+      </trans-unit>
+      <trans-unit id="chat.watchingSample">
+        <source>Watching a sample conversation...</source>
+        <target>Viendo una conversación de ejemplo...</target>
+      </trans-unit>
+      <trans-unit id="chat.demoOnly">
+        <source>Demo only. Full app connects you with real people.</source>
+        <target>Solo demo. La app completa te conecta con personas reales.</target>
+      </trans-unit>
+
+      <!-- How It Works Page -->
+      <trans-unit id="howItWorksPage.label">
+        <source>How It Works</source>
+        <target>Cómo Funciona</target>
+      </trans-unit>
+      <trans-unit id="howItWorksPage.title">
+        <source>From overwhelmed</source>
+        <target>De abrumado</target>
+      </trans-unit>
+      <trans-unit id="howItWorksPage.highlight">
+        <source>to supported</source>
+        <target>a apoyado</target>
+      </trans-unit>
+      <trans-unit id="howItWorksPage.subtitle">
+        <source>We've reimagined what cancer support can be.</source>
+        <target>Hemos reinventado lo que puede ser el apoyo contra el cáncer.</target>
+      </trans-unit>
+
+      <!-- Bob's Conversation -->
+      <trans-unit id="bobConversation.1">
+        <source>Hey. I'm Bob.</source>
+        <target>Hola, soy Bob.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.2">
+        <source>I'm a survivor too.</source>
+        <target>Yo también soy un superviviente.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.3">
+        <source>Can you tell me what's going on?</source>
+        <target>¿Me puedes contar qué te está pasando?</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.4">
+        <source>I just got diagnosed yesterday. Breast cancer. I don't even know where to start.</source>
+        <target>Me acaban de diagnosticar ayer. Cáncer de mama. Ni siquiera sé por dónde empezar.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.5">
+        <source>I'm really glad you reached out. Yesterday... that's so fresh. How are you feeling right now?</source>
+        <target>Me alegro mucho de que me hayas escrito. Ayer... es muy reciente. ¿Cómo te sientes ahora mismo?</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.6">
+        <source>Honestly? Terrified. I couldn't sleep at all last night.</source>
+        <target>¿Sinceramente? Aterrorizada. No pude dormir en toda la noche.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.7">
+        <source>That makes complete sense. I remember that feeling. The world looks different after those words, doesn't it?</source>
+        <target>Es completamente comprensible. Yo recuerdo esa sensación. El mundo parece diferente después de escuchar esas palabras, ¿verdad?</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.8">
+        <source>Yes. Everything feels surreal. Like I'm watching someone else's life.</source>
+        <target>Sí. Todo me parece irreal. Como si estuviera viendo la vida de otra persona.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.9">
+        <source>That disconnected feeling is so common in the first days. Your mind is trying to process something huge.</source>
+        <target>Esa sensación de desconexión es muy común en los primeros días. Tu mente está intentando procesar algo enorme.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.10">
+        <source>Can I ask - do you have someone with you right now?</source>
+        <target>¿Puedo preguntarte si tienes a alguien contigo ahora mismo?</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.11">
+        <source>My sister is here. She's been amazing but I can tell she's scared too.</source>
+        <target>Mi hermana está aquí. Ha sido increíble, pero noto que ella también está asustada.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.12">
+        <source>It's good you're not alone. And it's okay that she's scared. You can be scared together.</source>
+        <target>Qué bueno que no estés sola. Y está bien que ella esté asustada. Podéis estar asustadas juntas.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.13">
+        <source>I have so many questions but I don't even know what to ask.</source>
+        <target>Tengo tantas preguntas pero ni siquiera sé qué preguntar.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.14">
+        <source>That's completely normal. You don't need to have it all figured out right now.</source>
+        <target>Eso es completamente normal. No necesitas tenerlo todo claro ahora mismo.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.15">
+        <source>In my experience, the questions come when they're ready. And we'll be here for each one.</source>
+        <target>En mi experiencia, las preguntas llegan cuando están listas. Y nosotros estaremos aquí para cada una de ellas.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.16">
+        <source>When you were diagnosed, what helped you the most in those first days?</source>
+        <target>Cuando a ti te diagnosticaron, ¿qué te ayudó más en esos primeros días?</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.17">
+        <source>Honestly? Talking to someone who'd been through it. Someone who could tell me that this chaotic feeling wouldn't last forever.</source>
+        <target>¿Sinceramente? Hablar con alguien que había pasado por lo mismo. Alguien que pudiera decirme que esa sensación de caos no iba a durar para siempre.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.18">
+        <source>The medical stuff was important, but having someone who just got it... that's what carried me through.</source>
+        <target>Lo médico era importante, pero tener a alguien que simplemente lo entendía... eso fue lo que me ayudó a salir adelante.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.19">
+        <source>That's why I came here. My doctor gave me pamphlets but I needed something more human.</source>
+        <target>Por eso vine aquí. Mi médico me dio unos folletos pero yo necesitaba algo más humano.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.20">
+        <source>Pamphlets don't hold your hand at 3am. I understand.</source>
+        <target>Los folletos no te cogen de la mano a las 3 de la madrugada. Te entiendo.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.21">
+        <source>Exactly. Do you think... will I be okay?</source>
+        <target>Exacto. ¿Tú crees que... voy a estar bien?</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.22">
+        <source>I can't promise what your journey will look like. But I can tell you that you're stronger than you know right now.</source>
+        <target>No te puedo prometer cómo será tu camino. Pero sí te puedo decir que eres más fuerte de lo que tú crees ahora mismo.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.23">
+        <source>And you won't walk this path alone. That I can promise.</source>
+        <target>Y no vas a caminar sola por este camino. Eso sí te lo puedo prometer.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.24">
+        <source>That actually helps. Just knowing someone understands.</source>
+        <target>Eso me ayuda. Solo saber que alguien lo entiende.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.25">
+        <source>I do understand. And there are thousands of survivors in our community who understand too.</source>
+        <target>Yo lo entiendo. Y hay miles de supervivientes en nuestra comunidad que también lo entienden.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.26">
+        <source>I think I'd like to connect with someone who had a similar diagnosis. Is that possible?</source>
+        <target>Creo que me gustaría conectar con alguien que haya tenido un diagnóstico similar. ¿Es posible?</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.27">
+        <source>Absolutely. That's exactly what we do here. I can help match you with someone who's been where you are.</source>
+        <target>Por supuesto. Eso es exactamente lo que hacemos aquí. Te puedo ayudar a encontrar a alguien que ha estado donde tú estás ahora.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.28">
+        <source>Someone who knows the specific fears, the specific questions, the specific victories.</source>
+        <target>Alguien que conoce los miedos específicos, las preguntas específicas, las victorias específicas.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.29">
+        <source>That would mean so much. I feel less alone already just talking to you.</source>
+        <target>Eso significaría muchísimo para mí. Ya me siento menos sola solo por haber hablado contigo.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.30">
+        <source>You ARE less alone. You found us, and that took courage.</source>
+        <target>ESTÁS menos sola. Nos encontraste, y eso requirió valentía.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.31">
+        <source>I don't feel very courageous right now.</source>
+        <target>No me siento muy valiente ahora mismo.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.32">
+        <source>Courage isn't the absence of fear. It's reaching out when you're terrified. You did that today.</source>
+        <target>El valor no es la ausencia del miedo. Es tender la mano cuando estás aterrorizada. Eso es lo que tú hiciste hoy.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.33">
+        <source>I never thought of it that way.</source>
+        <target>Nunca lo había pensado así.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.34">
+        <source>One day at a time. Sometimes one hour at a time. That's how we do this.</source>
+        <target>Un día a la vez. A veces una hora a la vez. Así es como lo hacemos.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.35">
+        <source>Thank you, Bob. Really.</source>
+        <target>Gracias, Bob. De verdad.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.36">
+        <source>I'm here whenever you need me. Day or night. That's what Forward Together is about.</source>
+        <target>Yo estoy aquí siempre que me necesites. De día o de noche. De eso se trata Forward Together.</target>
+      </trans-unit>
+      <trans-unit id="bobConversation.37">
+        <source>You're not alone in this. Not anymore.</source>
+        <target>Ya no estás sola en esto.</target>
+      </trans-unit>
+
+      <!-- Miri's Conversation -->
+      <trans-unit id="miriConversation.1">
+        <source>Hi. I'm Miri.</source>
+        <target>Hola, soy Miri.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.2">
+        <source>I see you too.</source>
+        <target>Yo también te veo a ti.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.3">
+        <source>How are you holding up?</source>
+        <target>¿Cómo lo estás llevando?</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.4">
+        <source>Honestly, I don't even know. My husband was diagnosed with lymphoma three weeks ago.</source>
+        <target>Sinceramente, ni siquiera lo sé. A mi marido le diagnosticaron un linfoma hace tres semanas.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.5">
+        <source>Three weeks. You're still in the thick of it. I'm glad you reached out.</source>
+        <target>Tres semanas. Todavía estás en plena tormenta. Me alegro de que me hayas escrito.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.6">
+        <source>Can I ask - how are YOU doing? Not him. You.</source>
+        <target>¿Te puedo preguntar cómo estás TÚ? No él. Tú.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.7">
+        <source>Nobody asks me that. Everyone asks about Tom.</source>
+        <target>Nadie me pregunta eso a mí. Todos preguntan por Tomás.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.8">
+        <source>I know. That's why I'm asking. Your feelings matter too.</source>
+        <target>Lo sé. Por eso te lo pregunto yo. Tus sentimientos también importan.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.9">
+        <source>I feel guilty even talking about myself. He's the one who's sick.</source>
+        <target>Me siento culpable incluso hablando de mí misma. Él es el que está enfermo.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.10">
+        <source>There's no guilt needed here. Caring for someone takes everything you have. Your struggles are real.</source>
+        <target>Aquí no hay necesidad de sentir culpa. Cuidar de alguien requiere todo lo que tienes. Tus luchas son reales.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.11">
+        <source>I'm exhausted. I haven't slept properly in weeks. I'm trying to be strong for him and the kids.</source>
+        <target>Estoy agotada. No he dormido bien en semanas. Intento ser fuerte para él y para los niños.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.12">
+        <source>That's such a heavy weight to carry. Being strong for everyone while processing your own fear.</source>
+        <target>Es un peso muy grande el que llevas. Ser fuerte para todos mientras procesas tu propio miedo.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.13">
+        <source>Sometimes I feel so angry. And then I feel awful for being angry.</source>
+        <target>A veces me siento muy enfadada. Y luego me siento fatal por estar enfadada.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.14">
+        <source>Anger is a normal part of this. It doesn't make you a bad person or a bad caregiver.</source>
+        <target>El enfado es una parte normal de todo esto. No te hace mala persona ni mala cuidadora.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.15">
+        <source>You're allowed to feel angry at the situation. At cancer. At the unfairness of it all.</source>
+        <target>Tienes todo el derecho a sentir enfado con la situación. Con el cáncer. Con lo injusto de todo.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.16">
+        <source>I just want our normal life back.</source>
+        <target>Solo quiero que vuelva nuestra vida normal.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.17">
+        <source>Of course you do. Grieving the life you had is part of this journey too.</source>
+        <target>Claro que sí. Llorar la vida que teníais también es parte de este camino.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.18">
+        <source>I feel like I'm failing at everything. The house is a mess, I forgot my daughter's permission slip...</source>
+        <target>Siento que estoy fallando en todo. La casa está hecha un desastre, olvidé la autorización del colegio de mi hija...</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.19">
+        <source>You're not failing. You're surviving an impossible situation. Something has to give.</source>
+        <target>Tú no estás fallando. Estás sobreviviendo a una situación imposible. Algo tiene que ceder.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.20">
+        <source>A messy house doesn't mean you're failing. It means you're prioritizing what matters most.</source>
+        <target>Una casa desordenada no significa que estés fallando. Significa que estás priorizando lo que más importa.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.21">
+        <source>I keep thinking I should be handling this better.</source>
+        <target>Sigo pensando que debería estar manejando esto mejor.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.22">
+        <source>There's no 'right way' to handle this. You're doing it, and that's what counts.</source>
+        <target>No hay una forma 'correcta' de manejar esto. Lo estás haciendo, y eso es lo que cuenta.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.23">
+        <source>My mom keeps offering to help but I feel like I should be able to do this myself.</source>
+        <target>Mi madre sigue ofreciéndose a ayudar pero siento que debería poder hacer esto yo sola.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.24">
+        <source>Accepting help isn't weakness. It's wisdom. You can't pour from an empty cup.</source>
+        <target>Aceptar ayuda no es una debilidad. Es sabiduría. No puedes dar de un vaso vacío.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.25">
+        <source>What if letting your mom help is actually a gift to her too? A way she can feel useful?</source>
+        <target>¿Y si dejar que tu madre te ayude también es un regalo para ella? ¿Una forma de que ella se sienta útil?</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.26">
+        <source>I never thought of it that way.</source>
+        <target>Nunca lo había pensado así.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.27">
+        <source>Caregivers often forget they deserve care too. When's the last time you did something just for you?</source>
+        <target>Los cuidadores a menudo olvidan que ellos también merecen cuidados. ¿Cuándo fue la última vez que hiciste algo solo para ti?</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.28">
+        <source>I can't even remember. There's no time.</source>
+        <target>Ni me acuerdo. No hay tiempo.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.29">
+        <source>Even ten minutes matters. A cup of tea alone. A short walk. Small things add up.</source>
+        <target>Incluso diez minutos importan. Una taza de té a solas. Un paseo corto. Las pequeñas cosas suman.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.30">
+        <source>I feel selfish even thinking about myself.</source>
+        <target>Me siento egoísta incluso pensando en mí misma.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.31">
+        <source>Taking care of yourself isn't selfish. It's necessary. You can't support Tom if you collapse.</source>
+        <target>Cuidar de ti misma no es egoísmo. Es necesario. No puedes apoyar a Tomás si tú te derrumbas.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.32">
+        <source>That's what my sister says too.</source>
+        <target>Eso es lo que dice mi hermana también.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.33">
+        <source>She's right. Would you like to connect with other caregivers who understand this?</source>
+        <target>Ella tiene razón. ¿Te gustaría conectar con otros cuidadores que entienden por lo que estás pasando?</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.34">
+        <source>There are others going through this?</source>
+        <target>¿Hay otras personas pasando por esto?</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.35">
+        <source>Many others. Caregivers who know exactly what 3am anxiety feels like. Who understand the isolation.</source>
+        <target>Muchas otras. Cuidadores que saben exactamente cómo es la ansiedad de las 3 de la madrugada. Que entienden el aislamiento.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.36">
+        <source>Sometimes talking to someone who's been there makes all the difference.</source>
+        <target>A veces hablar con alguien que ha pasado por lo mismo marca toda la diferencia.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.37">
+        <source>Yes, I think I'd like that. It would help to not feel so alone in this.</source>
+        <target>Sí, creo que me gustaría. Me ayudaría a no sentirme tan sola en esto.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.38">
+        <source>You're not alone. There's a whole community here who sees what you're carrying.</source>
+        <target>No estás sola. Hay toda una comunidad aquí que ve lo que tú estás cargando.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.39">
+        <source>Thank you for asking about me, Miri. It means more than you know.</source>
+        <target>Gracias por preguntar por mí, Miri. Significa más de lo que te imaginas.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.40">
+        <source>That's what I'm here for. You matter, not just as a caregiver, but as a person.</source>
+        <target>Para eso estoy yo aquí. Tú importas, no solo como cuidadora, sino como persona.</target>
+      </trans-unit>
+      <trans-unit id="miriConversation.41">
+        <source>We're here whenever you need us. You don't have to carry this alone.</source>
+        <target>Estamos aquí siempre que nos necesites. No tienes que llevar esto tú sola.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

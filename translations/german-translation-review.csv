@@ -1,0 +1,211 @@
+﻿Section,Key,English,German (to review/update)
+Navigation,nav.home,Home,Startseite
+Navigation,nav.howItWorks,How It Works,So funktioniert es
+Navigation,nav.forSurvivors,For Survivors,Für Betroffene
+Navigation,nav.forCaregivers,For Caregivers,Für Angehörige
+Navigation,nav.stories,Stories,Geschichten
+Navigation,nav.beginJourney,Begin Your Journey,Starte deine Reise
+Brand,brand.tagline,You're not alone in this.,Du bist damit nicht allein.
+Footer,footer.forYou,For You,Für dich
+Footer,footer.about,About,Über uns
+Footer,footer.resources,Resources,Ressourcen
+Footer,footer.getStarted,Get Started,Loslegen
+Footer,footer.ourStory,Our Story,Unsere Geschichte
+Footer,footer.contactUs,Contact Us,Kontakt
+Footer,footer.helpCenter,Help Center,Hilfe-Center
+Footer,footer.privacyPolicy,Privacy Policy,Datenschutz
+Footer,footer.termsOfService,Terms of Service,Nutzungsbedingungen
+Footer,footer.copyright,© 2025 Forward Together Project. All rights reserved.,© 2025 Forward Together Projekt. Alle Rechte vorbehalten.
+Footer,footer.builtBy,"Built by survivors, for survivors. Because no one should face cancer alone.","Von Betroffenen für Betroffene. Weil niemand den Krebs alleine bewältigen sollte."
+Hero,hero.title1,You don't have to,Du musst das nicht
+Hero,hero.title2,face this alone,alleine durchstehen
+Hero,hero.description,"Whether you're navigating a cancer diagnosis or caring for someone who is, Forward Together connects you with people who truly understand — because they've walked the same path.","Ob du selbst eine Krebsdiagnose erhalten hast oder jemanden pflegst – Forward Together verbindet dich mit Menschen, die wirklich verstehen, weil sie denselben Weg gegangen sind."
+Hero,hero.startJourney,Start Your Journey →,Starte deine Reise →
+Hero,hero.seeHowItWorks,See How It Works,So funktioniert es
+Hero,hero.joinWith,Join with other survivors and caregivers,Schließe dich anderen Betroffenen und Angehörigen an
+Chat Preview,chatPreview.yourSurvivorGuide,Your Survivor Guide,Dein Begleiter für Betroffene
+Chat Preview,chatPreview.msg1,"Hey. I'm Bob. I'm a survivor too. I remember what it felt like in the beginning.","Hallo. Ich bin Bob. Ich bin auch ein Überlebender. Ich erinnere mich, wie es sich am Anfang angefühlt hat."
+Chat Preview,chatPreview.msg2,Someone helped me back then. That's what I'm here to do for you.,"Damals hat mir jemand geholfen. Das ist es, was ich jetzt für dich tun möchte."
+Chat Preview,chatPreview.msg3,I just found out yesterday. I don't even know where to start...,"Ich habe es gestern erfahren. Ich weiß nicht mal, wo ich anfangen soll..."
+Chat Preview,chatPreview.msg4,That's okay. You don't have to have it figured out. Can you tell me a little about what's going on?,"Das ist in Ordnung. Du musst nicht alles sofort wissen. Kannst du mir ein bisschen erzählen, was passiert ist?"
+How It Works,howItWorks.label,How It Works,So funktioniert es
+How It Works,howItWorks.title1,From overwhelmed to,Von überfordert zu
+How It Works,howItWorks.title2,supported,unterstützt
+How It Works,howItWorks.subtitle,No clinical questionnaires. No waiting rooms. Just meaningful connection.,Keine klinischen Fragebögen. Keine Wartezimmer. Nur echte Verbindung.
+How It Works,howItWorks.step1Title,Share Your Story,Teile deine Geschichte
+How It Works,howItWorks.step1Desc,No forms. Just conversation.,Keine Formulare. Nur Gespräch.
+How It Works,howItWorks.step2Title,Get Understood,Werde verstanden
+How It Works,howItWorks.step2Desc,AI guides respond with genuine empathy.,KI-Begleiter antworten mit echtem Mitgefühl.
+How It Works,howItWorks.step3Title,Find Your People,Finde deine Leute
+How It Works,howItWorks.step3Desc,Connect with those who've walked your path.,"Verbinde dich mit denen, die deinen Weg kennen."
+How It Works,howItWorks.step4Title,Move Forward Together,Gemeinsam vorwärts
+How It Works,howItWorks.step4Desc,Build connections. Help others.,Baue Verbindungen auf. Hilf anderen.
+Guides,guides.label,Meet Your Guides,Lerne deine Begleiter kennen
+Guides,guides.title,Always here. Always understanding.,Immer da. Immer verständnisvoll.
+Guides - Bob,guides.bob.role,Survivor Guide,Begleiter für Betroffene
+Guides - Bob,guides.bob.description,"A survivor himself, Bob understands the weight of those first days. He's here to listen and share wisdom from thousands of survivors.","Als Überlebender versteht Bob die Last der ersten Tage. Er ist hier, um zuzuhören und die Weisheit von Tausenden Überlebenden zu teilen."
+Guides - Bob,guides.bob.trait1,Warm & steady,Warm & beständig
+Guides - Bob,guides.bob.trait2,Been there,War selbst betroffen
+Guides - Bob,guides.bob.trait3,No judgment,Ohne Vorurteile
+Guides - Bob,guides.bob.button,Talk to Bob,Mit Bob sprechen
+Guides - Miri,guides.miri.role,Caregiver Guide,Begleiterin für Angehörige
+Guides - Miri,guides.miri.description,"Miri sees you — not just as a caregiver, but as someone carrying an invisible weight. Your needs matter too.","Miri sieht dich – nicht nur als pflegende Person, sondern als jemanden, der eine unsichtbare Last trägt. Auch deine Bedürfnisse zählen."
+Guides - Miri,guides.miri.trait1,Compassionate,Mitfühlend
+Guides - Miri,guides.miri.trait2,Practical,Praktisch
+Guides - Miri,guides.miri.trait3,Sees your struggle,Sieht deinen Kampf
+Guides - Miri,guides.miri.button,Talk to Miri,Mit Miri sprechen
+Features,features.label,Why Forward Together,Warum Forward Together
+Features,features.title,Built different. For a reason.,Anders gebaut. Aus gutem Grund.
+Features,features.feature1Title,"No Forms, Just Conversation","Keine Formulare, nur Gespräch"
+Features,features.feature1Desc,"Our AI understands context, not checkboxes.","Unsere KI versteht Zusammenhänge, keine Checkboxen."
+Features,features.feature2Title,Real Peer Matching,Echtes Peer-Matching
+Features,features.feature2Desc,"Same cancer, same stage, same life situation.","Gleicher Krebs, gleiches Stadium, gleiche Lebenssituation."
+Features,features.feature3Title,"Your Story, Your Control","Deine Geschichte, deine Kontrolle"
+Features,features.feature3Desc,Choose what to share. Privacy is sacred.,"Wähle, was du teilst. Privatsphäre ist heilig."
+Features,features.feature4Title,Available 24/7,Rund um die Uhr verfügbar
+Features,features.feature4Desc,Cancer doesn't keep office hours. Neither do we.,Krebs hält keine Bürozeiten ein. Wir auch nicht.
+Features,features.feature5Title,Collective Wisdom,Kollektive Weisheit
+Features,features.feature5Desc,Learn from thousands of journeys.,Lerne aus Tausenden von Erfahrungen.
+Features,features.feature6Title,Give Back When Ready,"Gib zurück, wenn du bereit bist"
+Features,features.feature6Desc,Turn your experience into someone else's hope.,Verwandle deine Erfahrung in die Hoffnung eines anderen.
+CTA,cta.title,Ready to take the first step?,Bereit für den ersten Schritt?
+CTA,cta.subtitle,You don't have to figure this out alone.,Du musst das nicht alleine herausfinden.
+CTA,cta.imSurvivor,I'm a Survivor,Ich bin Betroffene/r
+CTA,cta.imCaregiver,I'm a Caregiver,Ich bin Angehörige/r
+CTA,cta.freePrivate,Free. Private.,Kostenlos. Privat.
+For Survivors,forSurvivors.label,For Survivors,Für Betroffene
+For Survivors,forSurvivors.title,You've already shown incredible strength.,Du hast bereits unglaubliche Stärke gezeigt.
+For Survivors,forSurvivors.highlight,Let us walk with you.,Lass uns dich begleiten.
+For Survivors,forSurvivors.subtitle,Connect with people who get it — because they've lived it.,Verbinde dich mit Menschen, die es verstehen – weil sie es erlebt haben.
+For Survivors,forSurvivors.ctaText,Talk to Bob →,Mit Bob sprechen →
+For Survivors,forSurvivors.sectionTitle,We understand where you are,"Wir verstehen, wo du stehst"
+For Survivors,forSurvivors.stage1Title,Just Diagnosed,Gerade diagnostiziert
+For Survivors,forSurvivors.stage1Desc,The world shifted. You need someone who knows it gets better.,"Die Welt hat sich verändert. Du brauchst jemanden, der weiß, dass es besser wird."
+For Survivors,forSurvivors.stage2Title,In Treatment,In Behandlung
+For Survivors,forSurvivors.stage2Desc,Connect with others who know exactly what you're going through.,"Verbinde dich mit anderen, die genau wissen, was du durchmachst."
+For Survivors,forSurvivors.stage3Title,Post-Treatment,Nach der Behandlung
+For Survivors,forSurvivors.stage3Desc,"""Scanxiety"" is real. Others understand.","""Scanangst"" ist real. Andere verstehen das."
+For Survivors,forSurvivors.stage4Title,Long-term Survivorship,Langzeit-Überlebende
+For Survivors,forSurvivors.stage4Desc,Share your wisdom. Help someone beginning their journey.,Teile deine Weisheit. Hilf jemandem am Anfang seiner Reise.
+For Caregivers,forCaregivers.label,For Caregivers,Für Angehörige
+For Caregivers,forCaregivers.title,You're showing up every day.,Du bist jeden Tag da.
+For Caregivers,forCaregivers.highlight,Who's showing up for you?,Wer ist für dich da?
+For Caregivers,forCaregivers.subtitle,Forward Together sees you as someone who needs support too.,"Forward Together sieht dich als jemanden, der auch Unterstützung braucht."
+For Caregivers,forCaregivers.ctaText,Talk to Miri →,Mit Miri sprechen →
+For Caregivers,forCaregivers.sectionTitle,We see what you carry,"Wir sehen, was du trägst"
+For Caregivers,forCaregivers.quote1,"""I feel guilty taking time for myself.""","""Ich fühle mich schuldig, mir Zeit für mich zu nehmen."""
+For Caregivers,forCaregivers.response1,Your needs matter too.,Auch deine Bedürfnisse zählen.
+For Caregivers,forCaregivers.quote2,"""Nobody asks how I'm doing.""","""Niemand fragt, wie es mir geht."""
+For Caregivers,forCaregivers.response2,We ask. Your feelings are welcome here.,Wir fragen. Deine Gefühle sind hier willkommen.
+For Caregivers,forCaregivers.quote3,"""Sometimes I feel resentful, then awful.""","""Manchmal bin ich wütend, und dann fühle ich mich schrecklich."""
+For Caregivers,forCaregivers.response3,That's normal. You're exhausted.,Das ist normal. Du bist erschöpft.
+Stories,stories.label,Stories,Geschichten
+Stories,stories.title,Real people. Real journeys.,Echte Menschen. Echte Wege.
+Stories,stories.highlight,Real connection.,Echte Verbindung.
+Stories,stories.subtitle,Here are some of their stories.,Hier sind einige ihrer Geschichten.
+Stories,stories.today,Today:,Heute:
+Stories - Sarah,stories.sarah.role,Breast Cancer Survivor,Brustkrebsüberlebende
+Stories - Sarah,stories.sarah.headline,"""Bob was there at 3 AM""","""Bob war um 3 Uhr nachts da"""
+Stories - Sarah,stories.sarah.story,"I felt completely alone. Bob responded with such gentleness. He connected me with Maria, who had the same cancer. That connection carried me through.","Ich fühlte mich völlig allein. Bob antwortete mit so viel Sanftheit. Er verband mich mit Maria, die denselben Krebs hatte. Diese Verbindung hat mich durchgetragen."
+Stories - Sarah,stories.sarah.outcome,Now 2 years cancer-free.,Jetzt 2 Jahre krebsfrei.
+Stories - Michael,stories.michael.role,Caregiver,Pflegender Angehöriger
+Stories - Michael,stories.michael.headline,"""Miri asked how I was doing""","""Miri fragte, wie es mir geht"""
+Stories - Michael,stories.michael.story,"Everyone asked about my wife. Miri asked about ME. It was the first time someone acknowledged what I was carrying.","Alle fragten nach meiner Frau. Miri fragte nach MIR. Es war das erste Mal, dass jemand anerkannte, was ich trage."
+Stories - Michael,stories.michael.outcome,Now mentors other caregivers.,Jetzt Mentor für andere Angehörige.
+Get Started,getStarted.backToHome,← Back to Home,← Zurück zur Startseite
+Get Started,getStarted.welcome,Welcome to Forward Together,Willkommen bei Forward Together
+Get Started,getStarted.weAreHere,We're here for you.,Wir sind für dich da.
+Get Started,getStarted.facingDiagnosis,I'm facing a diagnosis,Ich habe eine Diagnose erhalten
+Get Started,getStarted.talkToBob,"Talk to Bob, a survivor guide.","Sprich mit Bob, einem Begleiter für Betroffene."
+Get Started,getStarted.meetBob,Meet Bob →,Bob kennenlernen →
+Get Started,getStarted.caringForSomeone,I'm caring for someone,Ich pflege jemanden
+Get Started,getStarted.talkToMiri,"Talk to Miri, a caregiver guide.","Sprich mit Miri, einer Begleiterin für Angehörige."
+Get Started,getStarted.meetMiri,Meet Miri →,Miri kennenlernen →
+Chat,chat.back,Back,Zurück
+Chat,chat.online,Online,Online
+Chat,chat.survivorGuide,Survivor Guide,Begleiter für Betroffene
+Chat,chat.caregiverGuide,Caregiver Guide,Begleiterin für Angehörige
+Chat,chat.watchingSample,Watching a sample conversation...,Du siehst ein Beispielgespräch...
+Chat,chat.demoOnly,Demo only. Full app connects you with real people.,Nur Demo. Die vollständige App verbindet dich mit echten Menschen.
+How It Works Page,howItWorksPage.label,How It Works,So funktioniert es
+How It Works Page,howItWorksPage.title,From overwhelmed,Von überfordert
+How It Works Page,howItWorksPage.highlight,to supported,zu unterstützt
+How It Works Page,howItWorksPage.subtitle,We've reimagined what cancer support can be.,"Wir haben neu gedacht, was Krebsunterstützung sein kann."
+Bob Conversation,bob.1,Hey. I'm Bob.,Hallo. Ich bin Bob.
+Bob Conversation,bob.2,I'm a survivor too.,Ich bin auch ein Überlebender.
+Bob Conversation,bob.3,Can you tell me what's going on?,"Kannst du mir erzählen, was bei dir los ist?"
+Bob Conversation,bob.4,I just got diagnosed yesterday. Breast cancer. I don't even know where to start.,"Ich habe gestern die Diagnose bekommen. Brustkrebs. Ich weiß nicht mal, wo ich anfangen soll."
+Bob Conversation,bob.5,I'm really glad you reached out. Yesterday... that's so fresh. How are you feeling right now?,"Ich bin wirklich froh, dass du dich gemeldet hast. Gestern... das ist noch so frisch. Wie fühlst du dich gerade?"
+Bob Conversation,bob.6,Honestly? Terrified. I couldn't sleep at all last night.,Ehrlich? Verängstigt. Ich konnte die ganze Nacht nicht schlafen.
+Bob Conversation,bob.7,"That makes complete sense. I remember that feeling. The world looks different after those words, doesn't it?","Das ist völlig verständlich. Ich erinnere mich an dieses Gefühl. Die Welt sieht anders aus nach diesen Worten, oder?"
+Bob Conversation,bob.8,Yes. Everything feels surreal. Like I'm watching someone else's life.,"Ja. Alles fühlt sich unwirklich an. Als würde ich das Leben eines anderen beobachten."
+Bob Conversation,bob.9,That disconnected feeling is so common in the first days. Your mind is trying to process something huge.,"Dieses Gefühl der Abgetrenntheit ist in den ersten Tagen sehr häufig. Dein Verstand versucht, etwas Gewaltiges zu verarbeiten."
+Bob Conversation,bob.10,Can I ask - do you have someone with you right now?,Darf ich fragen – hast du gerade jemanden bei dir?
+Bob Conversation,bob.11,My sister is here. She's been amazing but I can tell she's scared too.,"Meine Schwester ist hier. Sie war großartig, aber ich merke, dass sie auch Angst hat."
+Bob Conversation,bob.12,It's good you're not alone. And it's okay that she's scared. You can be scared together.,"Gut, dass du nicht allein bist. Und es ist okay, dass sie Angst hat. Ihr könnt zusammen Angst haben."
+Bob Conversation,bob.13,I have so many questions but I don't even know what to ask.,"Ich habe so viele Fragen, aber ich weiß nicht mal, was ich fragen soll."
+Bob Conversation,bob.14,That's completely normal. You don't need to have it all figured out right now.,Das ist völlig normal. Du musst jetzt nicht alles geklärt haben.
+Bob Conversation,bob.15,In my experience the questions come when they're ready. And we'll be here for each one.,"Nach meiner Erfahrung kommen die Fragen, wenn sie bereit sind. Und wir werden für jede einzelne da sein."
+Bob Conversation,bob.16,When you were diagnosed what helped you the most in those first days?,"Als du deine Diagnose bekommen hast, was hat dir in den ersten Tagen am meisten geholfen?"
+Bob Conversation,bob.17,Honestly? Talking to someone who'd been through it. Someone who could tell me that this chaotic feeling wouldn't last forever.,"Ehrlich? Mit jemandem zu sprechen, der es durchgemacht hat. Jemand, der mir sagen konnte, dass dieses chaotische Gefühl nicht ewig dauern würde."
+Bob Conversation,bob.18,The medical stuff was important but having someone who just got it... that's what carried me through.,"Das Medizinische war wichtig, aber jemanden zu haben, der es einfach verstand... das hat mich durchgetragen."
+Bob Conversation,bob.19,That's why I came here. My doctor gave me pamphlets but I needed something more human.,"Deshalb bin ich hier. Mein Arzt hat mir Broschüren gegeben, aber ich brauchte etwas Menschlicheres."
+Bob Conversation,bob.20,Pamphlets don't hold your hand at 3am. I understand.,Broschüren halten dir um 3 Uhr nachts nicht die Hand. Ich verstehe.
+Bob Conversation,bob.21,Exactly. Do you think... will I be okay?,Genau. Glaubst du... werde ich okay sein?
+Bob Conversation,bob.22,I can't promise what your journey will look like. But I can tell you that you're stronger than you know right now.,"Ich kann dir nicht versprechen, wie dein Weg aussehen wird. Aber ich kann dir sagen, dass du stärker bist, als du gerade denkst."
+Bob Conversation,bob.23,And you won't walk this path alone. That I can promise.,Und du wirst diesen Weg nicht alleine gehen. Das kann ich dir versprechen.
+Bob Conversation,bob.24,That actually helps. Just knowing someone understands.,"Das hilft tatsächlich. Einfach zu wissen, dass jemand versteht."
+Bob Conversation,bob.25,I do understand. And there are thousands of survivors in our community who understand too.,"Ich verstehe. Und es gibt Tausende von Überlebenden in unserer Gemeinschaft, die es auch verstehen."
+Bob Conversation,bob.26,I think I'd like to connect with someone who had a similar diagnosis. Is that possible?,"Ich glaube, ich würde mich gerne mit jemandem verbinden, der eine ähnliche Diagnose hatte. Ist das möglich?"
+Bob Conversation,bob.27,Absolutely. That's exactly what we do here. I can help match you with someone who's been where you are.,"Absolut. Genau das machen wir hier. Ich kann dir helfen, jemanden zu finden, der dort war, wo du jetzt bist."
+Bob Conversation,bob.28,"Someone who knows the specific fears, the specific questions, the specific victories.","Jemand, der die spezifischen Ängste kennt, die spezifischen Fragen, die spezifischen Siege."
+Bob Conversation,bob.29,That would mean so much. I feel less alone already just talking to you.,"Das würde mir so viel bedeuten. Ich fühle mich jetzt schon weniger allein, nur weil ich mit dir gesprochen habe."
+Bob Conversation,bob.30,"You ARE less alone. You found us, and that took courage.","Du BIST weniger allein. Du hast uns gefunden, und das hat Mut gekostet."
+Bob Conversation,bob.31,I don't feel very courageous right now.,Ich fühle mich gerade nicht sehr mutig.
+Bob Conversation,bob.32,Courage isn't the absence of fear. It's reaching out when you're terrified. You did that today.,"Mut ist nicht die Abwesenheit von Angst. Es ist, die Hand auszustrecken, wenn man verängstigt ist. Das hast du heute getan."
+Bob Conversation,bob.33,I never thought of it that way.,So habe ich das noch nie gesehen.
+Bob Conversation,bob.34,One day at a time. Sometimes one hour at a time. That's how we do this.,Ein Tag nach dem anderen. Manchmal eine Stunde nach der anderen. So machen wir das.
+Bob Conversation,bob.35,"Thank you, Bob. Really.","Danke, Bob. Wirklich."
+Bob Conversation,bob.36,I'm here whenever you need me. Day or night. That's what Forward Together is about.,"Ich bin hier, wann immer du mich brauchst. Tag oder Nacht. Darum geht es bei Forward Together."
+Bob Conversation,bob.37,You're not alone in this. Not anymore.,Du bist damit nicht mehr allein.
+Miri Conversation,miri.1,Hi. I'm Miri.,Hallo. Ich bin Miri.
+Miri Conversation,miri.2,I see you too.,Ich sehe auch dich.
+Miri Conversation,miri.3,How are you holding up?,Wie hältst du dich?
+Miri Conversation,miri.4,Honestly I don't even know. My husband was diagnosed with lymphoma three weeks ago.,"Ehrlich gesagt, ich weiß es nicht mal. Mein Mann hat vor drei Wochen die Diagnose Lymphom bekommen."
+Miri Conversation,miri.5,Three weeks. You're still in the thick of it. I'm glad you reached out.,"Drei Wochen. Du steckst noch mittendrin. Ich bin froh, dass du dich gemeldet hast."
+Miri Conversation,miri.6,Can I ask - how are YOU doing? Not him. You.,Darf ich fragen – wie geht es DIR? Nicht ihm. Dir.
+Miri Conversation,miri.7,Nobody asks me that. Everyone asks about Tom.,Niemand fragt mich das. Alle fragen nach Thomas.
+Miri Conversation,miri.8,I know. That's why I'm asking. Your feelings matter too.,Ich weiß. Deshalb frage ich. Auch deine Gefühle zählen.
+Miri Conversation,miri.9,I feel guilty even talking about myself. He's the one who's sick.,"Ich fühle mich schuldig, überhaupt über mich zu sprechen. Er ist derjenige, der krank ist."
+Miri Conversation,miri.10,There's no guilt needed here. Caring for someone takes everything you have. Your struggles are real.,"Hier gibt es keine Schuld. Für jemanden zu sorgen, erfordert alles, was du hast. Deine Kämpfe sind real."
+Miri Conversation,miri.11,I'm exhausted. I haven't slept properly in weeks. I'm trying to be strong for him and the kids.,"Ich bin erschöpft. Ich habe seit Wochen nicht richtig geschlafen. Ich versuche, stark zu sein für ihn und die Kinder."
+Miri Conversation,miri.12,That's such a heavy weight to carry. Being strong for everyone while processing your own fear.,"Das ist eine so schwere Last. Stark sein für alle, während du deine eigene Angst verarbeitest."
+Miri Conversation,miri.13,Sometimes I feel so angry. And then I feel awful for being angry.,"Manchmal bin ich so wütend. Und dann fühle ich mich schrecklich, weil ich wütend bin."
+Miri Conversation,miri.14,Anger is a normal part of this. It doesn't make you a bad person or a bad caregiver.,Wut ist ein normaler Teil davon. Es macht dich nicht zu einem schlechten Menschen oder einer schlechten Pflegeperson.
+Miri Conversation,miri.15,You're allowed to feel angry at the situation. At cancer. At the unfairness of it all.,Du darfst wütend sein auf die Situation. Auf den Krebs. Auf die Ungerechtigkeit von allem.
+Miri Conversation,miri.16,I just want our normal life back.,Ich will einfach nur unser normales Leben zurück.
+Miri Conversation,miri.17,"Of course you do. Grieving the life you had is part of this journey too.","Natürlich willst du das. Um das Leben zu trauern, das ihr hattet, ist auch Teil dieser Reise."
+Miri Conversation,miri.18,"I feel like I'm failing at everything. The house is a mess, I forgot my daughter's permission slip...","Ich habe das Gefühl, dass ich bei allem versage. Das Haus ist ein Chaos, ich habe die Erlaubnis für meine Tochter vergessen..."
+Miri Conversation,miri.19,You're not failing. You're surviving an impossible situation. Something has to give.,Du versagst nicht. Du überlebst eine unmögliche Situation. Irgendetwas muss nachgeben.
+Miri Conversation,miri.20,A messy house doesn't mean you're failing. It means you're prioritizing what matters most.,"Ein unordentliches Haus bedeutet nicht, dass du versagst. Es bedeutet, dass du priorisierst, was am wichtigsten ist."
+Miri Conversation,miri.21,I keep thinking I should be handling this better.,"Ich denke immer, ich sollte das besser hinbekommen."
+Miri Conversation,miri.22,"There's no 'right way' to handle this. You're doing it, and that's what counts.","Es gibt keinen ""richtigen Weg"", damit umzugehen. Du machst es, und das ist, was zählt."
+Miri Conversation,miri.23,My mom keeps offering to help but I feel like I should be able to do this myself.,"Meine Mutter bietet ständig an zu helfen, aber ich habe das Gefühl, ich sollte das alleine schaffen."
+Miri Conversation,miri.24,Accepting help isn't weakness. It's wisdom. You can't pour from an empty cup.,Hilfe anzunehmen ist keine Schwäche. Es ist Weisheit. Du kannst nicht aus einem leeren Becher einschenken.
+Miri Conversation,miri.25,What if letting your mom help is actually a gift to her too? A way she can feel useful?,"Was, wenn es auch ein Geschenk für deine Mutter ist, wenn du sie helfen lässt? Eine Möglichkeit für sie, sich nützlich zu fühlen?"
+Miri Conversation,miri.26,I never thought of it that way.,So habe ich das noch nie gesehen.
+Miri Conversation,miri.27,Caregivers often forget they deserve care too. When's the last time you did something just for you?,"Pflegende vergessen oft, dass auch sie Fürsorge verdienen. Wann hast du zuletzt etwas nur für dich getan?"
+Miri Conversation,miri.28,I can't even remember. There's no time.,Ich kann mich nicht mal erinnern. Es gibt keine Zeit.
+Miri Conversation,miri.29,Even ten minutes matters. A cup of tea alone. A short walk. Small things add up.,Selbst zehn Minuten zählen. Eine Tasse Tee allein. Ein kurzer Spaziergang. Kleine Dinge summieren sich.
+Miri Conversation,miri.30,I feel selfish even thinking about myself.,"Ich fühle mich egoistisch, auch nur an mich zu denken."
+Miri Conversation,miri.31,Taking care of yourself isn't selfish. It's necessary. You can't support Tom if you collapse.,"Auf dich selbst zu achten ist nicht egoistisch. Es ist notwendig. Du kannst Thomas nicht unterstützen, wenn du zusammenbrichst."
+Miri Conversation,miri.32,That's what my sister says too.,Das sagt meine Schwester auch.
+Miri Conversation,miri.33,She's right. Would you like to connect with other caregivers who understand this?,"Sie hat recht. Möchtest du dich mit anderen Pflegenden verbinden, die das verstehen?"
+Miri Conversation,miri.34,There are others going through this?,"Es gibt andere, die das durchmachen?"
+Miri Conversation,miri.35,"Many others. Caregivers who know exactly what 3am anxiety feels like. Who understand the isolation.","Viele andere. Pflegende, die genau wissen, wie sich die Angst um 3 Uhr nachts anfühlt. Die die Isolation verstehen."
+Miri Conversation,miri.36,Sometimes talking to someone who's been there makes all the difference.,"Manchmal macht es den ganzen Unterschied, mit jemandem zu sprechen, der es erlebt hat."
+Miri Conversation,miri.37,"Yes, I think I'd like that. It would help to not feel so alone in this.","Ja, ich glaube, das würde ich gerne. Es würde helfen, mich dabei nicht so allein zu fühlen."
+Miri Conversation,miri.38,You're not alone. There's a whole community here who sees what you're carrying.,"Du bist nicht allein. Hier ist eine ganze Gemeinschaft, die sieht, was du trägst."
+Miri Conversation,miri.39,"Thank you for asking about me, Miri. It means more than you know.","Danke, dass du nach mir gefragt hast, Miri. Das bedeutet mehr, als du weißt."
+Miri Conversation,miri.40,"That's what I'm here for. You matter, not just as a caregiver, but as a person.","Dafür bin ich hier. Du zählst, nicht nur als Pflegende, sondern als Mensch."
+Miri Conversation,miri.41,We're here whenever you need us. You don't have to carry this alone.,"Wir sind hier, wann immer du uns brauchst. Du musst das nicht alleine tragen."
