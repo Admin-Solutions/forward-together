@@ -25,15 +25,15 @@ export default function ForwardTogetherWebsite() {
   ];
 
   return (
-    <div className="min-h-screen bg-stone-50 font-sans text-stone-800">
+    <div className="min-h-screen bg-stone-50 font-ft-sans text-stone-800">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur shadow-md py-2' : 'bg-transparent py-4'}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'}`}>
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <button onClick={() => setCurrentPage('home')} className="flex items-center gap-3">
             <Logo size={44} />
             <div className="flex flex-col leading-tight">
-              <span className="font-serif font-semibold text-lg text-slate-800">{t('brand.forward')}</span>
-              <span className="font-serif text-sm text-teal-600">{t('brand.together')}</span>
+              <span className="font-ft-serif font-semibold text-lg text-slate-800">{t('brand.forward')}</span>
+              <span className="font-ft-serif text-sm text-teal-600">{t('brand.together')}</span>
             </div>
           </button>
 
@@ -58,7 +58,7 @@ export default function ForwardTogetherWebsite() {
                 onClick={() => setLanguage('en')}
                 className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                   language === 'en'
-                    ? 'bg-white text-teal-700 shadow-sm'
+                    ? 'bg-white text-teal-700 shadow-xs'
                     : 'text-stone-500 hover:text-stone-700'
                 }`}
               >
@@ -68,7 +68,7 @@ export default function ForwardTogetherWebsite() {
                 onClick={() => setLanguage('es')}
                 className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                   language === 'es'
-                    ? 'bg-white text-teal-700 shadow-sm'
+                    ? 'bg-white text-teal-700 shadow-xs'
                     : 'text-stone-500 hover:text-stone-700'
                 }`}
               >
@@ -78,7 +78,7 @@ export default function ForwardTogetherWebsite() {
                 onClick={() => setLanguage('de')}
                 className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                   language === 'de'
-                    ? 'bg-white text-teal-700 shadow-sm'
+                    ? 'bg-white text-teal-700 shadow-xs'
                     : 'text-stone-500 hover:text-stone-700'
                 }`}
               >
@@ -100,7 +100,7 @@ export default function ForwardTogetherWebsite() {
               onClick={() => setLanguage('en')}
               className={`px-2 py-1 rounded-full text-xs font-medium transition-colors ${
                 language === 'en'
-                  ? 'bg-white text-teal-700 shadow-sm'
+                  ? 'bg-white text-teal-700 shadow-xs'
                   : 'text-stone-500'
               }`}
             >
@@ -110,7 +110,7 @@ export default function ForwardTogetherWebsite() {
               onClick={() => setLanguage('es')}
               className={`px-2 py-1 rounded-full text-xs font-medium transition-colors ${
                 language === 'es'
-                  ? 'bg-white text-teal-700 shadow-sm'
+                  ? 'bg-white text-teal-700 shadow-xs'
                   : 'text-stone-500'
               }`}
             >
@@ -120,7 +120,7 @@ export default function ForwardTogetherWebsite() {
               onClick={() => setLanguage('de')}
               className={`px-2 py-1 rounded-full text-xs font-medium transition-colors ${
                 language === 'de'
-                  ? 'bg-white text-teal-700 shadow-sm'
+                  ? 'bg-white text-teal-700 shadow-xs'
                   : 'text-stone-500'
               }`}
             >
@@ -187,7 +187,7 @@ function Footer({ setCurrentPage }) {
             <div className="flex items-center gap-3 mb-4">
               <Logo size={48} />
               <div>
-                <div className="font-serif font-semibold">{t('brand.forward')} {t('brand.together')}</div>
+                <div className="font-ft-serif font-semibold">{t('brand.forward')} {t('brand.together')}</div>
                 <div className="text-sm text-stone-400">{t('brand.tagline')}</div>
               </div>
             </div>
@@ -243,9 +243,9 @@ function HomePage({ setCurrentPage }) {
 
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative">
           <div>
-            <h1 className="font-serif text-5xl lg:text-6xl font-medium text-slate-800 leading-tight mb-6">
+            <h1 className="font-ft-serif text-5xl lg:text-6xl lg:leading-none font-medium text-slate-800 leading-tight mb-6">
               {t('hero.title1')}
-              <span className="block bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">
+              <span className="block bg-linear-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">
                 {t('hero.title2')}
               </span>
             </h1>
@@ -285,10 +285,10 @@ function HomePage({ setCurrentPage }) {
 
           {/* Chat Preview */}
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-md mx-auto lg:ml-auto">
-            <div className="bg-gradient-to-r from-teal-600 to-teal-700 p-5 flex items-center gap-4">
+            <div className="bg-linear-to-r from-teal-600 to-teal-700 p-5 flex items-center gap-4">
               <div className="w-12 h-12 bg-white/20 rounded-full" />
               <div>
-                <p className="font-serif font-semibold text-white text-lg">{t('chatPreview.bob')}</p>
+                <p className="font-ft-serif font-semibold text-white text-lg">{t('chatPreview.bob')}</p>
                 <p className="text-teal-100 text-sm">{t('chatPreview.yourSurvivorGuide')}</p>
               </div>
             </div>
@@ -301,13 +301,13 @@ function HomePage({ setCurrentPage }) {
               ].map((msg, i) => (
                 <div key={i} className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed ${
                   msg.type === 'user'
-                    ? 'bg-teal-600 text-white ml-auto rounded-br-sm'
-                    : 'bg-stone-100 text-stone-700 rounded-bl-sm'
+                    ? 'bg-teal-600 text-white ml-auto rounded-br-xs'
+                    : 'bg-stone-100 text-stone-700 rounded-bl-xs'
                 }`}>
                   {msg.text}
                 </div>
               ))}
-              <div className="flex gap-1.5 p-4 bg-stone-100 rounded-2xl rounded-bl-sm w-20">
+              <div className="flex gap-1.5 p-4 bg-stone-100 rounded-2xl rounded-bl-xs w-20">
                 <span className="w-2 h-2 bg-stone-400 rounded-full animate-bounce" />
                 <span className="w-2 h-2 bg-stone-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
                 <span className="w-2 h-2 bg-stone-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
@@ -322,8 +322,8 @@ function HomePage({ setCurrentPage }) {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">{t('howItWorks.label')}</span>
-            <h2 className="font-serif text-4xl font-medium text-slate-800 mt-3 mb-4">
-              {t('howItWorks.title1')} <span className="bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">{t('howItWorks.title2')}</span>
+            <h2 className="font-ft-serif text-4xl font-medium text-slate-800 mt-3 mb-4">
+              {t('howItWorks.title1')} <span className="bg-linear-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">{t('howItWorks.title2')}</span>
             </h2>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
               {t('howItWorks.subtitle')}
@@ -341,7 +341,7 @@ function HomePage({ setCurrentPage }) {
                 <span className={`inline-block ${step.color} text-white text-sm font-bold px-4 py-1 rounded-full mb-6`}>
                   {step.num}
                 </span>
-                <h3 className="font-serif text-xl font-semibold text-slate-800 mb-3">{step.title}</h3>
+                <h3 className="font-ft-serif text-xl font-semibold text-slate-800 mb-3">{step.title}</h3>
                 <p className="text-stone-600 text-sm">{step.desc}</p>
               </div>
             ))}
@@ -354,13 +354,13 @@ function HomePage({ setCurrentPage }) {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">{t('guides.label')}</span>
-            <h2 className="font-serif text-4xl font-medium text-slate-800 mt-3">{t('guides.title')}</h2>
+            <h2 className="font-ft-serif text-4xl font-medium text-slate-800 mt-3">{t('guides.title')}</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-3xl p-8 shadow-lg border-t-4 border-teal-500">
-              <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full mb-6" />
-              <h3 className="font-serif text-3xl font-medium text-teal-700 mb-2">{t('guides.bob.name')}</h3>
+              <div className="w-20 h-20 bg-linear-to-br from-teal-500 to-teal-700 rounded-full mb-6" />
+              <h3 className="font-ft-serif text-3xl font-medium text-teal-700 mb-2">{t('guides.bob.name')}</h3>
               <p className="text-stone-500 mb-4">{t('guides.bob.role')}</p>
               <p className="text-stone-600 leading-relaxed mb-6">
                 {t('guides.bob.description')}
@@ -376,8 +376,8 @@ function HomePage({ setCurrentPage }) {
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-lg border-t-4 border-rose-500">
-              <div className="w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-700 rounded-full mb-6" />
-              <h3 className="font-serif text-3xl font-medium text-rose-600 mb-2">{t('guides.miri.name')}</h3>
+              <div className="w-20 h-20 bg-linear-to-br from-rose-500 to-rose-700 rounded-full mb-6" />
+              <h3 className="font-ft-serif text-3xl font-medium text-rose-600 mb-2">{t('guides.miri.name')}</h3>
               <p className="text-stone-500 mb-4">{t('guides.miri.role')}</p>
               <p className="text-stone-600 leading-relaxed mb-6">
                 {t('guides.miri.description')}
@@ -400,7 +400,7 @@ function HomePage({ setCurrentPage }) {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">{t('features.label')}</span>
-            <h2 className="font-serif text-4xl font-medium text-slate-800 mt-3">{t('features.title')}</h2>
+            <h2 className="font-ft-serif text-4xl font-medium text-slate-800 mt-3">{t('features.title')}</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -414,7 +414,7 @@ function HomePage({ setCurrentPage }) {
             ].map((f, i) => (
               <div key={i} className="bg-stone-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <span className="text-4xl mb-4 block">{f.icon}</span>
-                <h3 className="font-serif text-xl font-semibold text-slate-800 mb-3">{f.title}</h3>
+                <h3 className="font-ft-serif text-xl font-semibold text-slate-800 mb-3">{f.title}</h3>
                 <p className="text-stone-600">{f.desc}</p>
               </div>
             ))}
@@ -435,7 +435,7 @@ function CTASection({ setCurrentPage }) {
     <section className="py-24 px-6 bg-stone-50">
       <div className="max-w-3xl mx-auto text-center">
         <Logo size={80} />
-        <h2 className="font-serif text-4xl font-medium text-slate-800 mt-6 mb-4">{t('cta.title')}</h2>
+        <h2 className="font-ft-serif text-4xl font-medium text-slate-800 mt-6 mb-4">{t('cta.title')}</h2>
         <p className="text-xl text-stone-600 mb-8">{t('cta.subtitle')}</p>
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           <button onClick={() => setCurrentPage('chat-bob')} className="px-8 py-4 bg-teal-600 text-white rounded-full text-lg font-semibold hover:bg-teal-700 shadow-lg">
@@ -484,7 +484,7 @@ function ForSurvivorsPage({ setCurrentPage }) {
 
       <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-serif text-3xl font-medium text-slate-800 text-center mb-12">{t('forSurvivors.sectionTitle')}</h2>
+          <h2 className="font-ft-serif text-3xl font-medium text-slate-800 text-center mb-12">{t('forSurvivors.sectionTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { icon: '🌅', title: t('forSurvivors.stage1Title'), desc: t('forSurvivors.stage1Desc') },
@@ -494,7 +494,7 @@ function ForSurvivorsPage({ setCurrentPage }) {
             ].map((p, i) => (
               <div key={i} className="bg-stone-50 rounded-2xl p-8">
                 <span className="text-4xl mb-4 block">{p.icon}</span>
-                <h3 className="font-serif text-xl font-semibold text-slate-800 mb-3">{p.title}</h3>
+                <h3 className="font-ft-serif text-xl font-semibold text-slate-800 mb-3">{p.title}</h3>
                 <p className="text-stone-600">{p.desc}</p>
               </div>
             ))}
@@ -523,7 +523,7 @@ function ForCaregiversPage({ setCurrentPage }) {
 
       <section className="py-24 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl font-medium text-slate-800 text-center mb-12">{t('forCaregivers.sectionTitle')}</h2>
+          <h2 className="font-ft-serif text-3xl font-medium text-slate-800 text-center mb-12">{t('forCaregivers.sectionTitle')}</h2>
           <div className="space-y-6">
             {[
               { quote: t('forCaregivers.quote1'), response: t('forCaregivers.response1') },
@@ -531,7 +531,7 @@ function ForCaregiversPage({ setCurrentPage }) {
               { quote: t('forCaregivers.quote3'), response: t('forCaregivers.response3') },
             ].map((item, i) => (
               <div key={i} className="bg-stone-50 rounded-2xl p-8">
-                <p className="font-serif text-2xl italic text-rose-600 mb-4">{item.quote}</p>
+                <p className="font-ft-serif text-2xl italic text-rose-600 mb-4">{item.quote}</p>
                 <p className="text-stone-600 pl-6 border-l-4 border-stone-200">{item.response}</p>
               </div>
             ))}
@@ -581,11 +581,11 @@ function StoriesPage({ setCurrentPage }) {
               <div className="flex items-center gap-4 mb-6">
                 <div className={`w-14 h-14 ${s.color} rounded-full flex items-center justify-center text-white font-semibold text-xl`}>{s.name[0]}</div>
                 <div>
-                  <h3 className="font-serif font-semibold text-slate-800">{s.name}</h3>
+                  <h3 className="font-ft-serif font-semibold text-slate-800">{s.name}</h3>
                   <p className="text-stone-500 text-sm">{s.role}</p>
                 </div>
               </div>
-              <p className="font-serif text-xl italic text-teal-700 mb-4">{s.headline}</p>
+              <p className="font-ft-serif text-xl italic text-teal-700 mb-4">{s.headline}</p>
               <p className="text-stone-600 mb-4">{s.story}</p>
               <div className="bg-white rounded-xl p-4 text-sm">
                 <strong className="text-teal-600">{t('stories.today')}</strong> {s.outcome}
@@ -612,20 +612,20 @@ function GetStartedPage({ setCurrentPage }) {
         <button onClick={() => setCurrentPage('home')} className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-stone-600 hover:text-stone-800 hover:bg-stone-200 rounded-full transition-colors">
           <span className="text-lg">←</span> {t('getStarted.backToHome').replace('← ', '')}
         </button>
-        <h1 className="font-serif text-4xl font-medium text-slate-800 mb-4">{t('getStarted.welcome')}</h1>
+        <h1 className="font-ft-serif text-4xl font-medium text-slate-800 mb-4">{t('getStarted.welcome')}</h1>
         <p className="text-xl text-stone-600 mb-12">{t('getStarted.weAreHere')}</p>
 
         <div className="grid md:grid-cols-2 gap-8">
           <button onClick={() => { setJourneyType('survivor'); setStep('chat'); }} className="bg-white rounded-3xl p-10 text-center border-2 border-transparent hover:border-teal-500 hover:shadow-xl transition-all">
-            <div className="w-24 h-24 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full mx-auto mb-6" />
-            <h2 className="font-serif text-2xl font-semibold text-slate-800 mb-3">{t('getStarted.facingDiagnosis')}</h2>
+            <div className="w-24 h-24 bg-linear-to-br from-teal-500 to-teal-700 rounded-full mx-auto mb-6" />
+            <h2 className="font-ft-serif text-2xl font-semibold text-slate-800 mb-3">{t('getStarted.facingDiagnosis')}</h2>
             <p className="text-stone-600 mb-6">{t('getStarted.talkToBob')}</p>
             <span className="text-teal-600 font-semibold">{t('getStarted.meetBob')}</span>
           </button>
 
           <button onClick={() => { setJourneyType('caregiver'); setStep('chat'); }} className="bg-white rounded-3xl p-10 text-center border-2 border-transparent hover:border-rose-500 hover:shadow-xl transition-all">
-            <div className="w-24 h-24 bg-gradient-to-br from-rose-500 to-rose-700 rounded-full mx-auto mb-6" />
-            <h2 className="font-serif text-2xl font-semibold text-slate-800 mb-3">{t('getStarted.caringForSomeone')}</h2>
+            <div className="w-24 h-24 bg-linear-to-br from-rose-500 to-rose-700 rounded-full mx-auto mb-6" />
+            <h2 className="font-ft-serif text-2xl font-semibold text-slate-800 mb-3">{t('getStarted.caringForSomeone')}</h2>
             <p className="text-stone-600 mb-6">{t('getStarted.talkToMiri')}</p>
             <span className="text-rose-600 font-semibold">{t('getStarted.meetMiri')}</span>
           </button>
@@ -714,7 +714,7 @@ function ChatInterface({ journeyType, onBack }) {
   return (
     <section className="chat-overlay bg-stone-100 flex items-center justify-center overflow-hidden z-10" onTouchMove={(e) => e.preventDefault()}>
       <div className="w-full max-w-lg mx-4 bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col" style={{ height: 'calc(100% - 2rem)', maxHeight: '650px' }} onTouchMove={(e) => e.stopPropagation()}>
-        <div className={`${guide.color} p-5 flex items-center justify-between text-white flex-shrink-0`}>
+        <div className={`${guide.color} p-5 flex items-center justify-between text-white shrink-0`}>
           <button onClick={onBack} className="flex items-center gap-2 px-3 py-1.5 bg-white/20 hover:bg-white/30 rounded-full font-medium transition-colors">
             <span className="text-lg">←</span> {t('chat.back')}
           </button>
@@ -734,8 +734,8 @@ function ChatInterface({ journeyType, onBack }) {
         <div className="flex-1 overflow-y-auto p-5 space-y-4 min-h-0" style={{ touchAction: 'pan-y', overscrollBehavior: 'contain' }} onTouchMove={(e) => e.stopPropagation()}>
           {messages.map((msg, i) => (
             <div key={i} className={`flex gap-2 ${msg.sender === 'user' ? 'flex-row-reverse' : ''}`}>
-              {msg.sender === 'bot' && <div className={`w-8 h-8 ${guide.color} rounded-full flex-shrink-0`} />}
-              <div className={`max-w-[80%] p-4 rounded-2xl text-sm ${msg.sender === 'user' ? `${guide.color} text-white rounded-br-sm` : 'bg-stone-100 rounded-bl-sm'}`}>
+              {msg.sender === 'bot' && <div className={`w-8 h-8 ${guide.color} rounded-full shrink-0`} />}
+              <div className={`max-w-[80%] p-4 rounded-2xl text-sm ${msg.sender === 'user' ? `${guide.color} text-white rounded-br-xs` : 'bg-stone-100 rounded-bl-xs'}`}>
                 {msg.text}
               </div>
             </div>
@@ -752,7 +752,7 @@ function ChatInterface({ journeyType, onBack }) {
           )}
           {isUserTyping && (
             <div className="flex gap-2 flex-row-reverse">
-              <div className={`${guide.color} p-4 rounded-2xl rounded-br-sm flex gap-1`}>
+              <div className={`${guide.color} p-4 rounded-2xl rounded-br-xs flex gap-1`}>
                 <span className="w-2 h-2 bg-white/60 rounded-full animate-bounce" />
                 <span className="w-2 h-2 bg-white/60 rounded-full animate-bounce" style={{ animationDelay: '0.15s' }} />
                 <span className="w-2 h-2 bg-white/60 rounded-full animate-bounce" style={{ animationDelay: '0.3s' }} />
@@ -762,11 +762,11 @@ function ChatInterface({ journeyType, onBack }) {
           <div ref={messagesEndRef} />
         </div>
 
-        <div className="p-4 border-t flex-shrink-0">
+        <div className="p-4 border-t shrink-0">
           <p className="text-center text-sm text-stone-500 italic">{t('chat.watchingSample')}</p>
         </div>
 
-        <p className="text-center text-xs text-stone-400 pb-4 flex-shrink-0">{t('chat.demoOnly')}</p>
+        <p className="text-center text-xs text-stone-400 pb-4 shrink-0">{t('chat.demoOnly')}</p>
       </div>
     </section>
   );
@@ -774,12 +774,12 @@ function ChatInterface({ journeyType, onBack }) {
 
 function PageHero({ label, title, highlight, subtitle, ctaText, ctaAction, ctaColor = 'bg-teal-600 hover:bg-teal-700' }) {
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-teal-50 to-amber-50 text-center">
+    <section className="py-24 px-6 bg-linear-to-br from-teal-50 to-amber-50 text-center">
       <div className="max-w-3xl mx-auto">
         <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">{label}</span>
-        <h1 className="font-serif text-4xl md:text-5xl font-medium text-slate-800 mt-4 mb-6 leading-tight">
+        <h1 className="font-ft-serif text-4xl md:text-5xl md:leading-none font-medium text-slate-800 mt-4 mb-6 leading-tight">
           {title}
-          <span className="block bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">{highlight}</span>
+          <span className="block bg-linear-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">{highlight}</span>
         </h1>
         <p className="text-xl text-stone-600 mb-8 max-w-2xl mx-auto">{subtitle}</p>
         {ctaText && <button onClick={ctaAction} className={`px-8 py-4 ${ctaColor} text-white rounded-full text-lg font-semibold shadow-lg`}>{ctaText}</button>}
