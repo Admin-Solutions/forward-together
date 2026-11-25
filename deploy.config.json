@@ -1,0 +1,32 @@
+{
+  "apiBase": "https://seemynft.page",
+  "repoUrl": "github.com/admin-solutions/forward-together",
+  "artifacts": [
+    {
+      "name": "ft-js",
+      "env": "both",
+      "file": "dist/assets/app.js",
+      "tableName": "AB RD Java Script File",
+      "controlGuid": "58854df7-05b1-401d-a35e-4b7f1e407fc2",
+      "raidId": 831823,
+      "raidGuid": "4FAD270E-0634-4F00-B698-E209DB49CFBB",
+      "seriesGuid": "FCBA02E6-8619-4A27-A40A-135CAB96D7E3",
+      "fileFriendlyName": "forward-together-website-java-script-file",
+      "expectMarker": "Forward Together",
+      "minKb": 150
+    },
+    {
+      "name": "ft-css",
+      "env": "both",
+      "file": "dist/assets/style.css",
+      "tableName": "AB RD CSS File",
+      "controlGuid": "4E187783-C778-4238-90E8-E8C82C29E32A",
+      "raidId": 831822,
+      "raidGuid": "0BEE4DEC-31E5-4944-85F8-238DC0A47EFF",
+      "seriesGuid": "76E4BFD5-69BB-410D-AC2F-EAFAFCB1C1B1",
+      "fileFriendlyName": "forward-together-website-react-css-file",
+      "expectMarker": "--font-ft-serif",
+      "minKb": 15
+    }
+  ]
+}
